@@ -1,0 +1,53 @@
+@use '../../abstract' as var;
+
+.service {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.serviceTitle {
+    margin-bottom: 20px;
+}
+
+.serviceText {
+    margin-bottom: 20px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+@include var.tablet-size {
+
+    .service {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        background-image: url('/service_bg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right center;
+
+        border-bottom: 2px solid var.$brand-danger;
+    }
+
+
+    .serviceWrapper {
+        width: 70%;
+    }
+
+    .serviceTitle {
+        font-size: 32px;
+    }
+
+    .serviceText {
+        font-size: 16px;
+    }
+}
+
+@include var.desktop-size {
+
+    .serviceWrapper {
+        width: 50%;
+    }
+}
