@@ -1,0 +1,170 @@
+@use '../../app/styles/abstract' as var;
+
+.footer {
+    color: var.$brand-white;
+
+    background-color: var.$brand-black;
+
+    ul {
+        @extend %list-reset;
+    }
+}
+
+.container {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.logo {
+    display: inline-block;
+    margin-bottom: 60px;
+
+    img {
+        vertical-align: middle;
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+
+    div {
+        width: calc((100% - 30px) / 2);
+    }
+
+    h3 {
+        margin-top: 0;
+        margin-bottom: 30px;
+
+        color: var.$brand-brown;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+
+    li {
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    a {
+        font-size: 14px;
+
+        &:hover {
+            color: var.$brand-danger;
+        }
+    }
+}
+
+.phone {
+    display: inline-block;
+    margin-top: 18px;
+    vertical-align: middle;
+}
+
+.copyright,
+.politics {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.politics {
+
+    li {
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.publicInfo {
+    margin: 0;
+
+    color: var.$brand-brown-second;
+    font-size: 12px;
+
+    br {
+        display: none;
+    }
+}
+
+@include var.tablet-size {
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 292px;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+            "nav logo"
+            "nav copyright"
+            "nav politics"
+            "public public";
+        padding-top: 100px;
+        padding-bottom: 80px;
+    }
+
+    .nav {
+        grid-area: nav;
+        justify-self: start;
+        margin-bottom: 0;
+    }
+
+    .phone {
+        white-space: nowrap;
+    }
+
+    .logo {
+        grid-area: logo;
+        margin-bottom: 60px;
+
+        img {
+            width: 292px;
+            height: auto;
+        }
+    }
+
+    .copyright {
+        grid-area: copyright;
+        justify-self: end;
+        margin-bottom: 10px;
+    }
+
+    .politics {
+        grid-area: politics;
+        justify-self: end;
+        margin-bottom: 0;
+
+        text-align: right;
+    }
+
+    .publicInfo {
+        grid-area: public;
+        margin-top: 65px;
+
+        br {
+            display: inline;
+        }
+    }
+}
+
+@include var.desktop-size {
+
+    .container {
+        position: relative;
+    }
+
+    .publicInfo {
+        position: absolute;
+        bottom: 5px;
+        left: 160px;
+
+        margin-top: 0;
+    }
+}

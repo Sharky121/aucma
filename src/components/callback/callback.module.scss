@@ -1,0 +1,70 @@
+@use '../../app/styles/abstract' as var;
+
+.callback {
+    background-color: var.$brand-primary;
+}
+
+.callbackContainer {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.callbackHeader {
+    margin-bottom: 60px;
+}
+
+.title {
+    margin-bottom: 20px;
+
+    font-size: 28px;
+}
+
+.subtitle {
+    margin: 0;
+    
+    font-size: 14px;
+
+    br {
+        display: none;
+    }
+}
+
+@include var.tablet-size {
+
+    .callbackContainer {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .title {
+        margin-bottom: 20px;
+
+        font-size: 36px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+
+        br {
+            display: inline;
+        }
+    }
+
+    .callbackHeader {
+        margin-bottom: 0;
+    }
+
+    .callbackHeader, 
+    .form {
+        width: calc((100% - 20px) / 2);
+    }
+}
+
+@include var.desktop-size {
+
+    .title {
+        font-size: 36px;
+    }
+}

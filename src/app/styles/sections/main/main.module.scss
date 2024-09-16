@@ -1,0 +1,95 @@
+@use '../../abstract' as var;
+
+.section {
+    position: relative;
+
+    &::before {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: block;
+        width: 100%;
+        height: 265px;
+
+        background-image: url('/main_bg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+
+.container {
+    padding-top: 290px;
+    padding-bottom: 25px;
+
+    text-align: center;
+}
+
+.title {
+    margin: 0;
+
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    margin-top: 20px;
+    margin-bottom: 0;
+
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.btn {
+    margin-top: 25px;
+}
+
+@include var.tablet-size {
+
+    .section {
+        background-image: url('/main_bg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+        &::before {
+            display: none;
+        }
+    }
+
+    .container {
+        height: 600px;
+        padding-top: 60px;
+        padding-right: 20px;
+        padding-bottom: 0;
+
+        text-align: right;
+    }
+
+    .btn {
+        display: none!important;
+    }
+
+    .title {
+        font-size: 48px;
+        color: var.$brand-white;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        color: var.$brand-white;
+    }
+}
+
+@include var.desktop-size {
+
+    .container {
+        padding-top: 110px;
+        padding-right: 80px;
+    }
+}

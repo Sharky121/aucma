@@ -1,0 +1,79 @@
+@use '../../abstract' as var;
+
+.offer {
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.offerContainer {
+    padding-top: 215px;
+    padding-bottom: 20px;
+
+    background-image: url('/truck.png'), url('/product_1.png');
+    background-position: 20px 45px, 180px 45px;
+    background-size: 140px 113px, 155px 127px;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.offerText {
+    margin-top: 0;
+    margin-bottom: 40px;
+
+    br {
+        display: none;
+    }
+}
+
+.offerSlogan {
+    font-size: 36px;
+}
+
+.offerSubSlogan {
+    margin-top: 0;
+    margin-bottom: 40px;
+
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.offerList {
+    @extend %list-reset;
+}
+
+@include var.tablet-size {
+
+    .offer {
+        padding-top: 80px;
+        padding-bottom: 20px;
+    }
+
+    .offerContainer {
+        padding-top: 450px;
+
+        background-position: left 45px, right 45px;
+        background-size: 400px 322px, 500px 410px;
+    }
+
+    .offerText {s
+    
+        br {
+            display: inline;
+        }
+    }
+}
+
+@include var.desktop-size {
+
+    .offer {
+        padding-top: 100px;
+        padding-bottom: 20px;
+    }
+
+    .offerContainer {
+        padding-top: 550px;
+
+        background-position: 60px 45px, 700px 45px;
+        background-size: 500px 402px, 600px 492px;
+    }
+}

@@ -1,0 +1,58 @@
+@use '../../abstract' as var;
+
+.buy {
+    padding-top: 40px;
+    padding-bottom: 350px;
+
+    background-image: url('/buy_bg.jpg');
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.buyCard {
+    padding: 40px;
+
+    border-radius: 5px;
+    box-shadow: 0 2px 2px 0 rgba(var.$brand-black, 0.14),
+                0 3px 1px -2px rgba(var.$brand-black, 0.12),
+                0 1px 5px 0 rgba(var.$brand-black, 0.2);
+}
+
+.buyCardTitle {
+    margin-top: 0;
+    margin-bottom: 40px;
+
+    font-size: 28px;
+}
+
+.buyCardSubTitle {
+    margin-top: 0;
+    margin-bottom: 40px;
+
+    br {
+        display: none;
+    }
+}
+
+@include var.tablet-size {
+
+    .buyCard {
+        width: 520px;
+    }
+}
+
+@include var.desktop-size {
+
+    .buyCard {
+        width: 690px;
+    }
+
+    .buyCardSubTitle {
+        margin-top: 0;
+        margin-bottom: 40px;
+    
+        br {
+            display: inline;
+        }
+    }
+}

@@ -1,0 +1,102 @@
+@use '../../abstract' as var;
+
+.features {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.list {
+    @extend %list-reset;
+}
+
+.item {
+    --size: 60px;
+
+    position: relative;
+
+    margin-bottom: 40px;
+    padding-top: 80px;
+    padding-right: 40px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &::before {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: block;
+        height: var(--size);
+        width: var(--size);
+
+        background-size: cover;
+    }
+
+    &::after {
+        --offset: 75px;
+
+        content: '';
+
+        position: absolute;
+        top: calc(var(--size) / 2);
+        left: var(--offset);
+
+        display: block;
+        width: calc(100% - var(--offset));
+        height: 2px;
+
+        background-color: var.$brand-grey;
+    }
+}
+
+@for $i from 1 through 8 {
+    .item:nth-child(#{$i})::before {
+        background-image: url('/feature_#{$i}.png');
+    }
+}
+
+.itemTitle {
+    margin: 0;
+
+    font-size: 16px;
+}
+
+@include var.tablet-size {
+
+    .list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 40px 20px;
+    }
+
+    .item {
+        width: calc((100% - 20px) / 2);
+        margin-bottom: 0;
+    }
+
+    .itemTitle {
+        max-width: 300px;
+    }
+}
+
+@include var.desktop-size {
+
+    .features {
+        padding-top: 50px;
+        padding-bottom: 100px;
+    }
+
+    .list {
+        gap: 80px 20px;
+    }
+
+    .item {
+        width: calc((100% - 20px * 3) / 4);
+    }
+}
