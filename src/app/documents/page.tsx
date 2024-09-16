@@ -1,5 +1,12 @@
+import Heading from "@/components/heading/heading";
+import styles from "../styles/sections/documents/documents.module.scss";
+
 export default async function Page() {
     return (
-        <>Documents</>
+        <>
+            <section className={styles.documents}>
+                <Heading color="danger">Документы</Heading>
+            </section>
+        </>
     )
 }

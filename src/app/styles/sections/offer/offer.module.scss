@@ -29,7 +29,7 @@
 }
 
 .offerSubSlogan {
-    margin-top: 0;
+    margin-top: 10px;
     margin-bottom: 40px;
 
     font-size: 18px;
@@ -55,11 +55,17 @@
         background-size: 400px 322px, 500px 410px;
     }
 
-    .offerText {s
+    .offerText {
+
+        font-size: 16px;
     
         br {
             display: inline;
         }
+    }
+
+    .offerItem {
+        font-size: 16px;
     }
 }
 

@@ -42,14 +42,14 @@
         &::before {
             top: 50%;
 
-            width: calc((100% - var.$tablet-width + 290px) / 2);
+            width: calc((100% - var.$tablet-width + 250px) / 2);
             margin-top: -16px;
         }
     }
 
     .container {
         max-width: var.$tablet-width;
-        padding-left: 160px;
+        padding-left: 140px;
     }
 
     .title {
@@ -63,7 +63,7 @@
     .wrapper {
     
         &::before {
-            width: calc((100% - var.$desktop-width + 290px) / 2);
+            width: calc((100% - var.$desktop-width + 250px) / 2);
         }
     }
 

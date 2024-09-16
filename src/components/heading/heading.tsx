@@ -1,4 +1,3 @@
-import Container from '../container/container';
 import styles from './heading.module.scss';
 
 interface IHeading {

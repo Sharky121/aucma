@@ -10,7 +10,7 @@ export default async function Page() {
             <section className={styles.offer}>
                 <Heading color="danger">Специальное предложение</Heading>
                 <Container customClassName={styles.offerContainer}>
-                    <p className={styles.offerText}>ООО «АКМА РУС» является партнером китайской компании «FAW TRUCKS». В целях укрепления и развития дружественных отношений, наши компании <br /> разработали уникальное предложение для российского рынка по приобретению транспортных средств.</p>
+                    <p className={styles.offerText}>ООО «АКМА РУС» является партнером китайской компании «FAW TRUCKS». В целях укрепления и развития дружественных отношений, <br /> наши компании  разработали уникальное предложение для российского рынка по приобретению транспортных средств.</p>
                     
                     <strong className={styles.offerSlogan}>Мы предлагаем</strong>
                     <p className={styles.offerSubSlogan}>купить сцепку (Тягач + Полуприцеп) на выгодных условиях</p>

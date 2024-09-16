@@ -2,11 +2,7 @@
 
 .buy {
     padding-top: 40px;
-    padding-bottom: 350px;
-
-    background-image: url('/buy_bg.jpg');
-    background-size: cover;
-    background-position: bottom center;
+    padding-bottom: 40px;
 }
 
 .buyCard {
@@ -35,6 +31,18 @@
 }
 
 @include var.tablet-size {
+
+    .buy {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        background-image: url('/buy_bg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right center;
+
+        border-bottom: 2px solid var.$brand-danger;
+    }
 
     .buyCard {
         width: 520px;
