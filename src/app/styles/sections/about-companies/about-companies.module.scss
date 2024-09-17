@@ -1,0 +1,59 @@
+@use '../../abstract' as var;
+
+.companiesContainer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    border-top: 2px solid var.$brand-grey;
+    border-bottom: 2px solid var.$brand-grey;
+}
+
+.companiesList {
+    @extend %list-reset;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.companiesItem {
+    width: calc((100% - 20px) / 2);
+}
+
+@include var.tablet-size {
+
+    .companiesContainer {
+        border-top: none;
+        border-bottom: none;
+    }
+
+    .companiesItem {
+        width: calc((100% - 20px * 3) / 4);
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        border-top: 2px solid var.$brand-grey;
+
+        img {
+            height: auto;
+        }
+
+        &:nth-child(1) img {
+            width: 190px;
+        }
+
+        &:nth-child(2) img {
+            width: 209px;
+        }
+
+        &:nth-child(3) img {
+            width: 220px;
+        }
+
+        &:nth-child(4) img {
+            width: 222px;
+        }
+    }
+}

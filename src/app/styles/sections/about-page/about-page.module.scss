@@ -1,0 +1,60 @@
+@use '../../abstract' as var;
+
+.aboutPage {
+    position: relative;
+
+    &::before {
+        content: '';
+
+        display: block;
+        width: 100%;
+        height: 160px;
+
+        background-image: url('/about_company_banner.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &::after {
+        content: '';
+
+        display: block;
+        width: 100%;
+        height: 300px;
+
+        background-image: url('/about_company_manufacturing.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+@include var.tablet-size {
+
+    .aboutPage {
+
+        &::before {
+            height: 280px;
+        }
+    
+        &::after {
+            height: 440px;
+        }
+    }
+}
+
+@include var.desktop-size {
+
+    .aboutPage {
+
+        &::before {
+            height: 390px;
+        }
+    
+        &::after {
+            height: 600px;
+        }
+    }
+}
+

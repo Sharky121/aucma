@@ -1,28 +1,16 @@
 @use '../../abstract' as var;
 
-.aboutCompany {
+.history {
     padding-top: 20px;
-}
-
-.aboutCompanyContainer {
     padding-bottom: 20px;
-
-    border-bottom: 2px solid var.$brand-danger;
 }
 
-.aboutCompanyTitle {
-    margin-bottom: 20px;
-
-    font-size: 28px;
-}
-
-.aboutCompanyWrapper {
-    margin-bottom: 20px;
-
+.historyContainer {
+     
     p {
         margin-bottom: 20px;
 
-        &:last-child {
+        &:last-of-type {
             margin-bottom: 0;
         }
     }
@@ -30,22 +18,19 @@
 
 @include var.tablet-size {
 
-    .aboutCompany {
+    .history {
         padding-top: 40px;
-    }
-
-    .aboutCompanyContainer {
         padding-bottom: 40px;
     }
 
-    .aboutCompanyWrapper {
+    .historyContainer {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
         flex-wrap: wrap;
-        height: 300px;
         gap: 20px;
+        height: 300px;
 
         p {
             width: calc((100% - 20px) / 2);
@@ -56,7 +41,7 @@
 
 @include var.desktop-size {
 
-    .aboutCompanyWrapper {
+    .historyContainer {
 
         p {
             font-size: 16px;
