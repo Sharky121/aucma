@@ -55,8 +55,8 @@
         background-image: url('/main_bg.jpg');
         background-size: cover;
         background-repeat: no-repeat;
-        background-attachment: fixed;
-
+        background-position: 0 center;
+ 
         &::before {
             display: none;
         }
@@ -88,8 +88,13 @@
 
 @include var.desktop-size {
 
+    .section {
+        background-position: 0 center;
+    }
+
     .container {
         padding-top: 110px;
         padding-right: 80px;
+        height: 800px;
     }
 }
