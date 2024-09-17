@@ -32,7 +32,7 @@ export default function Home() {
 
         {/* О полуприцепах */}
         <section className={stylesAbout.about}>
-          <Heading color="danger">Полуприцепы AUCMA</Heading>
+          <Heading isDanger>Полуприцепы AUCMA</Heading>
           <Container customClassName={stylesAbout.container}>
             <Image src="/about.png" width="292" height="240" alt="Полуприцеп AUCMA"></Image>
             <div className={stylesAbout.wrapper}>
@@ -46,7 +46,7 @@ export default function Home() {
 
         {/* Преимущества */}
         <section className={stylesFeatures.features}>
-          <Heading color="danger">Наши преимущества</Heading>
+          <Heading isDanger>Наши преимущества</Heading>
           <Container>
             <ul className={stylesFeatures.list}>
               {

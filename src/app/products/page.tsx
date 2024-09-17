@@ -110,7 +110,7 @@ export default async function Page() {
 
     return (
         <section className={styles.products}>
-            <Heading color="danger">Модельный ряд</Heading>
+            <Heading isDanger>Модельный ряд</Heading>
             <Container>
                 <ul className={styles.productsList}>
                     {

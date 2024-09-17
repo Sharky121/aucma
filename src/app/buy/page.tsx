@@ -9,7 +9,7 @@ export default async function Page() {
     return (
         <>
             <section className={styles.buy}>
-                <Heading color="danger">Покупка</Heading>
+                <Heading isDanger>Покупка</Heading>
                 <Container>
                     <div className={styles.buyCard}>
                         <h3 className={styles.buyCardTitle}>Получите коммерческое предложение</h3>
@@ -20,7 +20,7 @@ export default async function Page() {
             </section>
 
             <section className={stylesLeasing.leasing}>
-                <Heading color="danger">Лизинг</Heading>
+                <Heading>Лизинг</Heading>
                 <Container>
                     <p className={stylesLeasing.leasingText}>Мы сотрудничаем с большинством лизинговых компаний представленных <br /> на рынке РФ, что позволяет нашим клиентам находить самые выгодные <br /> предложения максимально быстро.</p>
                     <ul className={stylesLeasing.leasingList}>

@@ -5,6 +5,8 @@
 
     margin-bottom: 40px;
 
+    color: var.$brand-grey;
+
     &::before {
         content: '';
 
@@ -17,8 +19,12 @@
         width: calc((100% - var.$mobile-width + 20px) / 2);
         height: 32px;
 
-        background-color: var.$brand-danger;
+        background-color: currentColor;
     }
+}
+
+.wrapperDanger {
+    color: var.$brand-danger;
 }
 
 .container {

@@ -5,7 +5,7 @@ export default async function Page() {
     return (
         <>
             <section className={styles.media}>
-                <Heading color="danger">Медиа</Heading>
+                <Heading isDanger>Медиа</Heading>
             </section>
         </>
     )

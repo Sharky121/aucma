@@ -5,7 +5,7 @@ export default async function Page() {
     return (
         <>
             <section className={styles.aboutCompany}>
-                <Heading color="danger">О компании</Heading>
+                <Heading isDanger>О компании</Heading>
             </section>
         </>
     )
