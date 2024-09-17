@@ -1,0 +1,86 @@
+@use '../../abstract' as var;
+
+.news {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.newsList {
+    @extend %list-reset;
+}
+
+.newsItem {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+    border-bottom: 2px solid var.$brand-danger;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.newsTitle {
+    margin-bottom: 25px;
+
+    font-size: 16px;
+}
+
+.newsDate {
+    display: block;
+    margin-bottom: 25px;
+
+    color: var.$brand-grey-second;
+}
+
+.newsDesc {
+    margin-bottom: 80px;
+}
+
+.newsMore {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    svg {
+        margin-left: 12px;
+    }
+
+    &:hover {
+        color: var.$brand-danger;
+    }
+}
+
+@include var.tablet-size {
+    
+    .newsList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .newsItem {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: calc((100% - 20px) / 2);
+        margin-bottom: 0;
+    }
+
+    .newsMore {
+        margin-top: auto;
+    }
+}
+
+@include var.desktop-size {
+
+    .newsItem {
+        width: calc((100% - 20px * 2) / 3);
+    }
+}

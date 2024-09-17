@@ -69,7 +69,7 @@ const Footer = () => {
                 <div className={styles.politics}>
                     <ul>
                         <li>
-                            <Link href={''}>Политика конфидинцеальности</Link>
+                            <Link href={'politics'}>Политика конфидинцеальности</Link>
                         </li>
                         <li>
                             <Link href={''}>Карта сайта</Link>

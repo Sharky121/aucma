@@ -9,10 +9,10 @@
     padding-top: 215px;
     padding-bottom: 20px;
 
-    background-image: url('/truck.png'), url('/product_1.png');
-    background-position: 20px 45px, 180px 45px;
-    background-size: 140px 113px, 155px 127px;
-    background-repeat: no-repeat, no-repeat;
+    background-image: url('/offer.png');
+    background-position: 10px 25px;
+    background-size: 340px 146px;
+    background-repeat: no-repeat;
 }
 
 .offerText {
@@ -51,8 +51,8 @@
     .offerContainer {
         padding-top: 450px;
 
-        background-position: left 45px, right 45px;
-        background-size: 400px 322px, 500px 410px;
+        background-position: 10px 15px;
+        background-size: 940px 404px;
     }
 
     .offerText {
@@ -79,7 +79,7 @@
     .offerContainer {
         padding-top: 550px;
 
-        background-position: 60px 45px, 700px 45px;
-        background-size: 500px 402px, 600px 492px;
+        background-position: 10px -30px;
+        background-size: 1200px 515px;
     }
 }
