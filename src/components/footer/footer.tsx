@@ -54,7 +54,7 @@ const Footer = () => {
                         <h3>Контакты</h3>
                         <ul>
                             <li>
-                                <Link href={''}>Контакты</Link>
+                                <Link href="contacts">Контакты</Link>
                             </li>
                             <li>
                                 <Link href={''}>Задать вопрос</Link>
