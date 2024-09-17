@@ -34,7 +34,7 @@ export default function RootLayout({
         <div style={{ display: "none" }}>
           <svg preserveAspectRatio="xMinYMid">
             <symbol id="ico-arrow" viewBox="0 0 22 22">
-              <polygon fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" points="22,8 18,4 18,15 3,0 0,3 15,18 4,18 8,22 22.005,22.005"></polygon>
+              <polygon fill="currentColor" fillRule="evenodd" clipRule="evenodd" points="22,8 18,4 18,15 3,0 0,3 15,18 4,18 8,22 22.005,22.005"></polygon>
             </symbol>
             <symbol id="ico-phone" viewBox="0 0 24 24">
               <path fill="currentColor" d="M19.425 20.45q-2.9 0-5.762-1.388-2.863-1.387-5.113-3.637-2.25-2.25-3.637-5.1-1.388-2.85-1.388-5.775 0-.45.3-.75t.75-.3h3.25q.4 0 .687.237.288.238.363.613L9.45 7.3q.05.375-.025.675-.075.3-.325.525l-2.275 2.25q1.175 2 2.812 3.625Q11.275 16 13.35 17.2l2.225-2.25q.25-.25.588-.35.337-.1.687-.05l2.775.575q.375.075.613.35.237.275.237.675v3.25q0 .45-.3.75t-.75.3Z"></path>

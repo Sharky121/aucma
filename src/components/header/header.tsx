@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import Container from '../container/container';
 import styles from './header.module.scss';
 
@@ -34,6 +37,8 @@ const NavMenu = [
 ];
 
 const Header = () => {
+    const router = useRouter();
+
     return (
         <header className={styles.header}>
             <Container customClassName={styles.headerContainer}>
@@ -62,11 +67,11 @@ const Header = () => {
                         </li>
                     </ul>
                 </div>
-                <a className={styles.headerPhone} href="tel:+74996676543">
+                <a className={styles.headerPhone} href="tel:+74996776543">
                     <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false">
                         <use xlinkHref="#ico-phone" x="0" y="0"></use>
                     </svg>
-                    <span>+7 (499) 667-65-43</span>
+                    <span>+7 (499) 677-65-43</span>
                 </a>
 
                 <nav className={styles.headerNav}>

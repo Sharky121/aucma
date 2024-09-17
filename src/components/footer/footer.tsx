@@ -60,7 +60,7 @@ const Footer = () => {
                                 <Link href={''}>Задать вопрос</Link>
                             </li>
                         </ul>
-                        <a className={styles.phone} href="tel:+74996676543"><b>+7 (499) 667-65-43</b></a>
+                        <a className={styles.phone} href="tel:+74996676543"><b>+7 (499) 677-65-43</b></a>
                     </div>
                 </nav>
 

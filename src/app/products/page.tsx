@@ -122,14 +122,16 @@ export default async function Page() {
                                 <h3 className={styles.productsTitle}>{title}</h3>
 
                                 <table className={styles.productsTable}>
-                                    {
-                                        descriptions.map(({title, value}, index) => (
-                                            <tr key={index} className={styles.productsTr}>
-                                                <td className={styles.productsTd}>{title}</td>
-                                                <td className={styles.productsTd}><b>{value}</b></td>
-                                            </tr>
-                                        ))
-                                    }
+                                    <tbody>
+                                        {
+                                            descriptions.map(({title, value}, index) => (
+                                                <tr key={index} className={styles.productsTr}>
+                                                    <td className={styles.productsTd}>{title}</td>
+                                                    <td className={styles.productsTd}><b>{value}</b></td>
+                                                </tr>
+                                            ))
+                                        }
+                                    </tbody>
                                 </table>
 
                                 <Button text="Подробнее" />
