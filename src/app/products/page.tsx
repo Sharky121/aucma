@@ -3,6 +3,7 @@ import Heading from "@/components/heading/heading";
 import styles from "../styles/sections/products/products.module.scss";
 import Image from "next/image";
 import Button from "@/components/button/button";
+import Link from "next/link";
 
 const Products = [
     {
@@ -20,10 +21,6 @@ const Products = [
             {
                 "title": "Габаритные размеры с ХОУ (ДхШхВ, мм)",
                 "value": "14 070 * 2 600 * 3 980"
-            },
-            {
-                "title": "Габаритные размеры без ХОУ (ДхШхВ, мм)",
-                "value": "13 640 * 2 600 * 3 980"
             },
             {
                 "title": "Внутренние размеры (ДхШхВ, мм)",
@@ -60,10 +57,6 @@ const Products = [
         "slug": "isothermal",
         "descriptions": [
             {
-                "title": "Модель",
-                "value": "AKM9402XLC"
-            },
-            {
                 "title": "Количество осей",
                 "value": "3"
             },
@@ -72,8 +65,12 @@ const Products = [
                 "value": "04"
             },
             {
+                "title": "Габаритные размеры с ХОУ (ДхШхВ, мм)",
+                "value": "14 070 * 2 600 * 3 980"
+            },
+            {
                 "title": "Внутренние размеры (ДхШхВ, мм)",
-                "value": "13 400 * 2 600 * 3 980"
+                "value": "13 400 * 2 460 * 2 600 "
             },
             {
                 "title": "Внутренний объем",
@@ -114,7 +111,9 @@ export default async function Page() {
                         Products.map(({title, descriptions, slug}, index) => (
                             <li key={index} className={styles.productsItem}>
                                 <div className={styles.productsImg}>
-                                    <Image src={`/product_${index + 1}.png`} fill alt="" />
+                                    <Link href={`/products/${slug}`}>
+                                        <Image src={`/product_${index + 1}.png`} fill alt={title} />
+                                    </Link>
                                 </div>
                                 <h3 className={styles.productsTitle}>{title}</h3>
 

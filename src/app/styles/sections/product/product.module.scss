@@ -1,6 +1,7 @@
 @use '../../abstract' as var;
 
 .product, 
+.productNavigation,
 .productSpecifications,
 .productOrder,
 .productDescription {
@@ -98,12 +99,38 @@
     overflow: hidden;
 }
 
+.productNavigationWrapper {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+
+    background-color: var.$brand-primary;
+
+    ul {
+        @extend %list-reset;
+    }
+
+    li {
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        text-align: center;
+    }
+
+    a {
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+}
+
 @include var.tablet-size {
     
     .product,
     .productOrder,
     .productSpecifications,
-    .productDescription {
+    .productDescription,
+    .productNavigation {
         padding-top: 40px;
         padding-bottom: 40px;
     }
@@ -193,6 +220,21 @@
     .productDescriptionContent {
         width: calc(100% - 390px);
     }
+
+    .productNavigationWrapper {
+        margin-bottom: 60px;
+        
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 70px
+        }
+
+        a {
+            font-size: 20px;
+        }
+    }
 }
 
 @include var.desktop-size {
@@ -200,7 +242,8 @@
     .product, 
     .productOrder,
     .productSpecifications,
-    .productDescription {
+    .productDescription,
+    .productNavigation {
         padding-top: 60px;
         padding-bottom: 60px;
     }

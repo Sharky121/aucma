@@ -1,0 +1,84 @@
+@use '../../app/styles/abstract' as var;
+
+.slider {
+    max-width: var.$mobile-width;
+}
+
+.slide {
+    position: relative;
+
+    height: 210px;
+
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slideButtonPrev,
+.slideButtonNext {
+    visibility: hidden;
+}
+
+@include var.tablet-size {
+
+    .slider {
+        --offset: 820px;
+
+        max-width: 100%;
+    }
+
+    .slide {
+        width: var(--offset);
+        height: 547px;
+    }
+
+    .slideButtonPrev,
+    .slideButtonNext {
+        visibility: visible;
+        height: 55px;
+        width: 55px;
+
+        color: var.$brand-white;
+
+        border: 2px solid var.$brand-danger;
+        background-color: var.$brand-danger;
+
+        &::after {
+            display: none;
+        }
+
+        &:hover {
+            color: var.$brand-danger;
+
+            background-color: var.$brand-white;
+        };
+
+        svg {
+            width: 26px;
+            height: 20px;
+        }
+    }
+
+    .slideButtonPrev svg {
+        transform: rotate(180deg);
+    }
+
+    .slideButtonPrev {
+        left: calc((100% -  var(--offset) - 40px) / 2);
+    }
+
+    .slideButtonNext {
+        right: calc((100% -  var(--offset) - 40px) / 2);
+    }
+}
+
+@include var.desktop-size {
+
+    .slider {
+        --offset: 1160px;
+    }
+
+    .slide {
+        width: var(--offset);
+        height: 773px;
+    }
+}

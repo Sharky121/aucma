@@ -37,7 +37,7 @@ export default async function Page() {
                     <dl className={contactsStyles.serviceContactsDl}>
                         <div className={contactsStyles.serviceContactsDlItem}>
                             <dt className={contactsStyles.serviceContactsDt}>Телефон тех. специалиста</dt>
-                            <dd className={contactsStyles.serviceContactsDd}><b>+7 (499) 667-65-43</b></dd>
+                            <dd className={contactsStyles.serviceContactsDd}><b>+7 (499) 677-65-43</b></dd>
                         </div>
                         <div className={contactsStyles.serviceContactsDlItem}>
                             <dt className={contactsStyles.serviceContactsDt}>Адрес</dt>

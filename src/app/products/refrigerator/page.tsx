@@ -1,10 +1,16 @@
+import Image from "next/image";
+import Link from "next/link";
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+
 import Container from "@/components/container/container";
 import Heading from "@/components/heading/heading";
-import Image from "next/image";
 import Button from "@/components/button/button";
 import style from "../../styles/sections/product/product.module.scss";
+import Gallery from "@/components/gallery/gallery";
 
-const Product =     {
+const Product = {
     "title": "Полуприцеп-рефрижератор",
     "slug": "refrigerator",
     "descriptions": [
@@ -23,10 +29,6 @@ const Product =     {
         {
             "title": "Габаритные размеры с ХОУ (ДхШхВ, мм)",
             "value": "14 070 * 2 600 * 3 980"
-        },
-        {
-            "title": "Габаритные размеры без ХОУ (ДхШхВ, мм)",
-            "value": "13 640 * 2 600 * 3 980"
         },
         {
             "title": "Внутренние размеры (ДхШхВ, мм)",
@@ -62,7 +64,30 @@ const Product =     {
 export default async function Page() {
     return (
         <>
-            <section className={style.productSpecifications}>
+            <section className={style.productNavigation}>
+                <Heading isDanger>Полуприцепы AUCMA</Heading>
+                <div className={style.productNavigationWrapper}>
+                    <Container>
+                        <ul>
+                            <li>                   
+                                <Link href="#gallery">Фотогалерея</Link>
+                            </li>
+                            <li>
+                                <Link href="#specifications">Технические характеристики</Link>
+                            </li>
+                            <li>
+                                <Link href="#description">Описание</Link>
+                            </li>
+                        </ul>
+                    </Container>
+                </div>
+
+                <div className={style.productGallery} id="gallery">
+                    <Gallery />
+                </div>
+            </section>
+
+            <section className={style.productSpecifications} id="specifications">
                 <Heading>Технические характеристики</Heading>
                 <Container>
                     <table>
@@ -80,7 +105,7 @@ export default async function Page() {
                 </Container>
             </section>
 
-            <section className={style.productDescription}>
+            <section className={style.productDescription} id="description">
                 <Heading>Описание</Heading>
                 <Container>
                     <h3>Рама:</h3>
