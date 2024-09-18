@@ -5,27 +5,27 @@ import styles from './footer.module.scss';
 const NavMenu = [
     {
         "title": "Модельный ряд",
-        "url": ""
+        "url": "products"
     },
     {
         "title": "Покупка",
-        "url": ""
+        "url": "buy"
     },
     {
         "title": "Сервис",
-        "url": ""
+        "url": "service"
     },
     {
         "title": "О компании",
-        "url": ""
+        "url": "about"
     },
     {
         "title": "Документы",
-        "url": ""
+        "url": "documents"
     },
     {
         "title": "Медиа",
-        "url": ""
+        "url": "media"
     }
 ];
 

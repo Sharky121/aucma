@@ -79,7 +79,7 @@ const Header = () => {
                         {
                             NavMenu.map(({title, url}, index) => (
                                 <li key={index} className={styles.headerNav__item}>
-                                    <Link className={styles.headerNav__link} href={url}>{title}</Link>
+                                    <Link className={styles.headerNav__link} href={`/${url}`}>{title}</Link>
                                 </li>
                             ))
                         }

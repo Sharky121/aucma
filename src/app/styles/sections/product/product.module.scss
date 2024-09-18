@@ -1,0 +1,251 @@
+@use '../../abstract' as var;
+
+.product, 
+.productSpecifications,
+.productOrder,
+.productDescription {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.productOrder {
+
+    p {
+        margin-bottom: 20px;
+
+        font-size: 16px;
+    }
+
+    ul {
+        @extend %list-reset;
+    }
+
+    li {
+        margin-bottom: 20px;
+
+        text-align: center;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.productOrderButton {
+    width: 100%;
+}
+
+.productSpecifications {
+
+    table {
+        width: 100%;
+    }
+
+    tr {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        border-bottom: 2px solid var.$brand-grey;
+    }
+
+    td {
+        padding: 20px 20px 20px 0;
+
+        &:nth-child(1) {
+            width: 180px;
+        }
+
+        &:nth-child(2) {
+            width: calc(100% - 200px);
+
+            font-weight: 700;
+        }
+    }
+
+}
+
+.productDescription {
+
+    h3 { 
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    ul {
+        margin: 20px 0;
+    }
+}
+
+.productDescriptionBlock {
+    margin: 20px 0;
+}
+
+.productDescriptionImg {
+    position: relative;
+
+    height: 240px;
+    margin: 20px 0;
+
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@include var.tablet-size {
+    
+    .product,
+    .productOrder,
+    .productSpecifications,
+    .productDescription {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .productOrder {
+
+        p {
+            margin-bottom: 40px;
+
+            font-size: 20px;
+        }
+
+        ul {
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        li {
+            margin-bottom: 40px;
+        }
+    }
+
+    .productSpecifications {
+
+        tbody {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: stretch;
+        }
+
+        tr {
+            width: 50%;
+
+            &:nth-child(-n + 2) {
+                border-top: 2px solid var.$brand-danger;
+            }
+        }
+
+        td {
+            padding-top: 30px;
+            padding-bottom: 30px;
+
+            &:nth-child(1) {
+                width: 50%;
+            }
+    
+            &:nth-child(2) {
+                width: 50%;;
+            }
+        }
+    }
+
+    .productDescription {
+
+        h3 { 
+            font-size: 20px;
+        }
+    
+        p {
+            font-size: 16px;
+        }
+
+        ul {
+            font-size: 16px;
+        }
+    }
+
+    .productDescriptionBlock {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 50px;
+        margin-bottom: 50px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    .productDescriptionImg {
+        width: 340px;
+        height: 280px;
+    }
+
+    .productDescriptionContent {
+        width: calc(100% - 390px);
+    }
+}
+
+@include var.desktop-size {
+
+    .product, 
+    .productOrder,
+    .productSpecifications,
+    .productDescription {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .productOrder {
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 20px;
+            max-width: 100%;
+        }
+
+        li {
+            width: calc((100% - 20px * 2) / 3);
+            margin: 0;
+            padding-top: 40px;
+
+            border-top: 2px solid var.$brand-grey;
+        }
+    }
+
+    .productSpecifications {
+
+        tbody {
+            gap: 0 10px;
+        }
+
+        tr {
+            width: calc((100% - 10px * 2) / 3);
+
+            &:nth-child(-n + 3) {
+                border-top: 2px solid var.$brand-danger;
+            }
+        }
+    }
+
+    .productDescriptionImg {
+        width: calc((100% - 50px) / 2);
+        height: 475px;
+    }
+
+    .productDescriptionContent {
+        width: calc((100% - 50px) / 2);
+    }
+}

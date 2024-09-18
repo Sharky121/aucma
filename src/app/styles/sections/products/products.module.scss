@@ -109,16 +109,25 @@
     .productsList {
         display: flex;
         justify-content: flex-start;
-        align-items: flex-start;
+        align-items: stretch;
         gap: 20px;
     }
 
     .productsItem {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
         width: calc((100% - 20px) / 2);
+        margin-bottom: 0;
     }
 
     .productsImg {
         width: 400px;
         height: 328px;
+    }
+
+    .productsBtn {
+        margin-top: auto;
     }
 }

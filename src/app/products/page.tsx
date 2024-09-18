@@ -7,6 +7,7 @@ import Button from "@/components/button/button";
 const Products = [
     {
         "title": "Полуприцеп-рефрижератор",
+        "slug": "refrigerator",
         "descriptions": [
             {
                 "title": "Количество осей",
@@ -56,7 +57,12 @@ const Products = [
     },
     {
         "title": "Изотермический полуприцеп",
+        "slug": "isothermal",
         "descriptions": [
+            {
+                "title": "Модель",
+                "value": "AKM9402XLC"
+            },
             {
                 "title": "Количество осей",
                 "value": "3"
@@ -66,16 +72,8 @@ const Products = [
                 "value": "04"
             },
             {
-                "title": "Габаритные размеры с ХОУ (ДхШхВ, мм)",
-                "value": "14 070 * 2 600 * 3 980"
-            },
-            {
-                "title": "Габаритные размеры без ХОУ (ДхШхВ, мм)",
-                "value": "13 640 * 2 600 * 3 980"
-            },
-            {
                 "title": "Внутренние размеры (ДхШхВ, мм)",
-                "value": "13 400 * 2 460 * 2 600 "
+                "value": "13 400 * 2 600 * 3 980"
             },
             {
                 "title": "Внутренний объем",
@@ -91,7 +89,7 @@ const Products = [
             },
             {
                 "title": "Масса полуприцепа (кг):",
-                "value": "8 140 (с ХОУ и баком)"
+                "value": "7 360"
             },
             {
                 "title": "Масса перевозимого груза (кг)",
@@ -105,7 +103,6 @@ const Products = [
     }
 ];
 
-
 export default async function Page() {
 
     return (
@@ -114,7 +111,7 @@ export default async function Page() {
             <Container>
                 <ul className={styles.productsList}>
                     {
-                        Products.map(({title, descriptions}, index) => (
+                        Products.map(({title, descriptions, slug}, index) => (
                             <li key={index} className={styles.productsItem}>
                                 <div className={styles.productsImg}>
                                     <Image src={`/product_${index + 1}.png`} fill alt="" />
@@ -134,7 +131,7 @@ export default async function Page() {
                                     </tbody>
                                 </table>
 
-                                <Button text="Подробнее" />
+                                <Button customClass={styles.productsBtn} text="Подробнее" url={`/products/${slug}`}/>
                             </li>
                         ))
                     }

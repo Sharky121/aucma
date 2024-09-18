@@ -72,7 +72,24 @@
     }
 
     .btn {
-        display: none!important;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 220px;
+        height: 220px;
+        margin-top: 80px;
+
+        text-align: center;
+
+        border-radius: 50%;
+
+        span {
+            font-size: 16px;
+        }
+
+        svg {
+            width: 45px;
+            height: 45px;
+        }
     }
 
     .title {
@@ -89,12 +106,32 @@
 @include var.desktop-size {
 
     .section {
-        background-position: 0 center;
+        background-image:  url('/bg_1.png'), url('/main_bg.jpg');
+        background-size: 1200px, cover;
+        background-repeat: no-repeat, no-repeat;
+        background-position: -445px 210px, 0 center;
+
+        overflow: hidden;
     }
 
     .container {
         padding-top: 110px;
         padding-right: 80px;
         height: 800px;
+    }
+
+    .btn {
+        width: 260px;
+        height: 260px;
+        margin-top: 180px;
+
+        span {
+            font-size: 18px;
+        }
+
+        svg {
+            width: 60px;
+            height: 60px;
+        }
     }
 }

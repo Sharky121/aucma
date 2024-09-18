@@ -26,7 +26,7 @@ export default function Home() {
           <Container customClassName={stylesMain.container}>
             <h1 className={stylesMain.title}>Полуприцепы <br/> AUCMA</h1>
             <p className={stylesMain.subtitle}>Легкость в движении <br/> надежность в пути</p>
-            <Button text={'Специальное предложение на сцепку'} customClass={stylesMain.btn}/>
+            <Button text={'Специальное предложение на сцепку'} customClass={stylesMain.btn} url={'/offer'}/>
           </Container>
         </section>
 
