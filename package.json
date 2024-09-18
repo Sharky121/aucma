@@ -9,18 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@pbe/react-yandex-maps": "^1.2.5",
     "next": "14.2.7",
     "normalize.css": "^8.0.1",
     "react": "^18",
     "react-dom": "^18",
     "swiper": "^11.1.14",
-    "uuid": "^10.0.0"
+    "uuid": "^10.0.0",
+    "ymaps": "^0.2.1"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/uuid": "^10.0.0",
+    "@yandex/ymaps3-types": "^0.0.28",
     "eslint": "^8",
     "eslint-config-next": "14.2.7",
     "sass": "^1.77.8",

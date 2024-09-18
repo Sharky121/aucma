@@ -30,6 +30,7 @@ export default function RootLayout({
         
         <Callback />
         <Footer />
+
         {/* SVG-ICONS */}
         <div style={{ display: "none" }}>
           <svg preserveAspectRatio="xMinYMid">
@@ -55,12 +56,15 @@ export default function RootLayout({
             <symbol id="ico-arrow-left" viewBox="0 0 26 26">
               <polygon fill="currentColor" fillRule="evenodd" clipRule="evenodd" points="16,3 10,3 18,11 0,11 0,15 18,15 10,23 16,23 26,13"></polygon> 
             </symbol>
+            <symbol id="ico-cross" viewBox="0 0 24 24">
+              <path fill="currentColor" d="m12 13.05-5.075 5.075q-.2.2-.512.212-.313.013-.538-.212-.225-.225-.225-.525 0-.3.225-.525L10.95 12 5.875 6.925q-.2-.2-.212-.513-.013-.312.212-.537.225-.225.525-.225.3 0 .525.225L12 10.95l5.075-5.075q.2-.2.513-.213.312-.012.537.213.225.225.225.525 0 .3-.225.525L13.05 12l5.075 5.075q.2.2.212.512.013.313-.212.538-.225.225-.525.225-.3 0-.525-.225Z"></path>
+            </symbol>
+            <symbol id="ico-arrow-right-top" viewBox="0 0 22 22">
+              <polygon fill="currentColor" fillRule="evenodd" clipRule="evenodd" points="22,8 18,4 18,15 3,0 0,3 15,18 4,18 8,22 22.005,22.005"></polygon>
+            </symbol>
           </svg>
         </div>
       </body>
     </html>
   );
 }
-
-
-

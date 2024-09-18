@@ -10,15 +10,6 @@ import { v4 as uuidv4 } from 'uuid';
 import styles from './gallery.module.scss';
 import Loading from "../loading/loading";
 
-const ProductImages = [
-    "IMG_6583.jpg",
-    "IMG_6591.jpg",
-    "IMG_6607.jpg",
-    "IMG_6633.jpg",
-    "IMG_6646.jpg",
-    "IMG_6647.jpg"
-];
-
 const Gallery = () => {
     const [loading, setLoading] = useState(true);
     const galleryRef = useRef(null);
@@ -39,7 +30,7 @@ const Gallery = () => {
                 navigation: false,
                 spaceBetween: 0,
             });
-          }
+        }
 
         if (galleryRef.current) {
 

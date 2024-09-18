@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Heading from "@/components/heading/heading";
 import Container from "@/components/container/container";
 import styles from "../styles/sections/service/service.module.scss";
@@ -26,7 +25,7 @@ export default async function Page() {
                 <Heading>Авторизованные СТО</Heading>
                 <Container>
                     <div className={mapStyles.serviceMapWrapper}>
-                        <Image src={'/map.jpeg'} fill alt="Карта СТО"/>
+                        
                     </div>
                 </Container>
             </section>

@@ -63,11 +63,11 @@
     }
 
     .slideButtonPrev {
-        left: calc((100% -  var(--offset) - 40px) / 2);
+        left: calc((100% -  var(--offset) - 55px) / 2);
     }
 
     .slideButtonNext {
-        right: calc((100% -  var(--offset) - 40px) / 2);
+        right: calc((100% -  var(--offset) - 55px) / 2);
     }
 }
 

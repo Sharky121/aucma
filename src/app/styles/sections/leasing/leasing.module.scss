@@ -63,6 +63,7 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        flex-wrap: wrap;
         gap: 20px;
     }
 
@@ -88,17 +89,10 @@
 
         img {
             width: 290px;
+            height: 126px;
         }
 
-        &:nth-child(1) img {
-            height: 146px;
-        }
-
-        &:nth-child(2) img {
-            height: 131px;
-        }
-
-        &:nth-child(3) img {
+        &:nth-child(7) img {
             height: 55px;
         }
     }

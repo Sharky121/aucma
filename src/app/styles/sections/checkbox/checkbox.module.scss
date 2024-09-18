@@ -1,0 +1,94 @@
+@use '../../abstract' as var;
+
+.checkbox {
+    max-width: 160px;
+
+    label {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+    }
+
+    input {
+        position: absolute;
+        
+        opacity: 0;
+        pointer-events: none
+    }
+
+    span {
+        position: relative;
+
+        display: inline-block;
+        vertical-align: middle;
+        padding-right: 35px;
+
+        font-size: 10px;
+        line-height: 1.2;
+        text-align: right;
+
+        &::before {
+            content: '';
+    
+            position: absolute;
+            right: 0;
+            top: 50%;
+    
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin-top: -10px;
+    
+            border: 2px solid var.$brand-danger;
+            border-radius: 4px;
+        }
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+.checkbox:has(input:checked) {
+
+    span::before {
+        background-color: var.$brand-danger;
+    }
+
+    span::after {
+        content: '';
+
+        position: absolute;
+        top: 50%;
+        right: 3.7px;
+
+        display: block;
+        width: 12px;
+        height: 5px;
+        margin-top: -5.5px;
+
+        border: 2px solid var.$brand-white;
+        border-top: 2px solid transparent;
+        border-right: 2px solid transparent;
+
+        transform: rotate(-45deg);
+    }
+}
+
+@include var.tablet-size {
+
+    .checkbox {
+        max-width: 210px;
+
+        span {
+            font-size: 12px;
+        }
+    }
+}
+
+@include var.desktop-size {
+
+    .checkbox {
+        max-width: 260px;
+    }
+}

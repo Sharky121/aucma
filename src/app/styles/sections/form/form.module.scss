@@ -1,7 +1,9 @@
-@use '../../app/styles/abstract' as var;
+@use '../../abstract' as var;
 
 .input {
     @extend %form-field;
+
+    border-bottom: 2px solid var.$brand-danger;
 
     &:focus-visible {
         outline: none;
