@@ -5,10 +5,8 @@ import contactsStyles from "../styles/sections/service-contacts/service-contacts
 import mapStyles from "../styles/sections/service-map/service-map.module.scss";
 import Button from "@/components/button/button";
 import dynamic from "next/dynamic";
+import Map from "@/components/map/map";
 
-const Map = dynamic(async () => import('../../components/map/map'), {
-    ssr: false,
-});
 
 export default async function Page() {
     return (
