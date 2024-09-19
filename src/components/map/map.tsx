@@ -9,7 +9,7 @@ import {
 } from "ymap3-components";
 import styles from "./map.module.scss";
 
-const location = { center: [55.381915, 37.583760], zoom: 10 };
+const location = { center: [37.583760, 55.381915], zoom: 10 };
 
 const Map = () => {
 
@@ -20,7 +20,7 @@ const Map = () => {
                     <YMap location={location}>
                         <YMapDefaultSchemeLayer />
                         <YMapDefaultFeaturesLayer />
-                        <YMapDefaultMarker coordinates={[55.381915, 37.583760]}/>
+                        <YMapDefaultMarker coordinates={[37.583760, 55.381915]}/>
                     </YMap>
                 </YMapComponentsProvider>
             </div>        
