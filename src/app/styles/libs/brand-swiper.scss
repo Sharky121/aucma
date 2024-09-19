@@ -1,6 +1,33 @@
+@use '../abstract' as var;
 @use 'swiper/css/navigation';
 
-.swiper-slide-prev,
-.swiper-slide-next {
-    opacity: 0.5;
+@include var.tablet-size {
+
+    .swiper-slide-prev,
+    .swiper-slide-next {
+        opacity: 0.5;
+    }
+    
+    .swiper-slide-thumb-active {
+        border: 2px solid var.$brand-danger;
+    }
+    
+    .slider .swiper-slide-prev {
+        transform: scale(0.8) translateX(50px);
+    }
+    
+    .slider .swiper-slide-next {
+        transform: scale(0.8) translateX(-50px);
+    }
+}
+
+@include var.desktop-size {
+
+    .slider .swiper-slide-prev {
+        transform: scale(0.8) translateX(100px);
+    }
+    
+    .slider .swiper-slide-next {
+        transform: scale(0.8) translateX(-100px);
+    }
 }

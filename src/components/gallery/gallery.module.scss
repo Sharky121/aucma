@@ -18,6 +18,10 @@
     visibility: hidden;
 }
 
+.thumbSlider {
+    display: none;
+}
+
 @include var.tablet-size {
 
     .slider {
@@ -68,6 +72,30 @@
 
     .slideButtonNext {
         right: calc((100% -  var(--offset) - 55px) / 2);
+    }
+
+    .thumbSlider {
+        display: block;
+        width: 620px;
+        margin: -40px auto 0;
+    }
+
+    .thumbSlide {
+        position: relative;
+
+        width: 80px;
+        height: 80px;
+
+        border-radius: 10px;
+        overflow: hidden;
+
+        cursor: pointer;
+
+        opacity: 1!important;
+    }
+   
+    .thumbSlideImage {
+        object-fit: cover;
     }
 }
 

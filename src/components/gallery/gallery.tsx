@@ -1,89 +1,74 @@
 'use client'
 
-import Image from "next/image";
-import { Suspense, useEffect, useRef, useState } from 'react';
-import Swiper from 'swiper';
-import { Thumbs, Navigation } from "swiper/modules";
-import '../../app/styles/libs/brand-swiper.scss';
 import { v4 as uuidv4 } from 'uuid';
-
+import { useEffect, useState } from 'react';
+import Image from "next/image";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Thumbs, Virtual, Navigation } from 'swiper/modules';
+import '../../app/styles/libs/brand-swiper.scss';
 import styles from './gallery.module.scss';
+import GalleryButtonPrev from './gallery-button-prev';
+import GalleryButtonNext from './gallery-button-next';
+
+interface IGallery {
+    images: string[];
+}
 
 const Gallery = () => {
-    const galleryRef = useRef(null);
-    const thumbsRef = useRef(null);
-    const [images, setImages] = useState([
-        "IMG_6583.jpg",
-        "IMG_6591.jpg",
-        "IMG_6607.jpg",
-        "IMG_6633.jpg",
-        "IMG_6646.jpg",
-        "IMG_6647.jpg"
-    ]);
+    const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    const [imagesLoaded, setImagesLoaded] = useState(true);
 
-    useEffect(() => {
-        if (thumbsRef.current) {
-            new Swiper(thumbsRef.current, {
-                slidesPerView: 4,
-                navigation: false,
-                spaceBetween: 0,
-            });
-        }
+    const slides = Array.from({ length: 28 }).map(
+        (el, index) => `product_${index + 1}.jpg`
+    );
 
-        if (galleryRef.current) {
-
-            new Swiper(galleryRef.current, {
-                modules: [Thumbs, Navigation],
-                slidesPerView: 1,
-                spaceBetween: 0,
-                thumbs: {
-                    swiper: thumbsRef.current,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev'
-                },
-                breakpoints: {
-                    960: {
-                        loop: true,
-                        centeredSlides: true,
-                        slidesPerView: 'auto',
-                        spaceBetween: 35
-                    },
-                    1280: {
-                        loop: true,
-                        centeredSlides: true,
-                        slidesPerView: 'auto',
-                        spaceBetween: 60                    
-                    }
-                }
-            });
-          };
-    }, []);
+    const thumbsSlides = Array.from({ length: 28 }).map(
+        (el, index) => `product_thumbs_${index + 1}.jpg`
+    );
+    
 
     return (
         <>
-            <div className={`swiper ${styles.slider}`} ref={galleryRef}>
-                <div className="swiper-wrapper">
-                    {
-                        images.map((image, index) => (
-                            <div key={index + uuidv4()} className={`swiper-slide ${styles.slide}`}>
-                                <Image src={`/gallery/${image}`} fill alt="Фото продукта"/>
-                            </div>
-                        ))
-                    }
-                </div>
-                <div className={`swiper-button-prev ${styles.slideButtonPrev}`}>
-                    <svg viewBox="0 0 26 26" width="26" height="20" aria-hidden="true" focusable="false">
-                        <use xlinkHref="#ico-arrow-left" x="0" y="0"></use>
-                    </svg>
-                </div>
-                <div className={`swiper-button-next ${styles.slideButtonNext}`}>
-                    <svg viewBox="0 0 26 26" width="26" height="20" aria-hidden="true" focusable="false">
-                        <use xlinkHref="#ico-arrow-left" x="0" y="0"></use>
-                    </svg>
-                </div>
-            </div>
+            {imagesLoaded && (
+                <>
+                    <Swiper className={`slider ${styles.slider}`} 
+                            slidesPerView={'auto'} 
+                            modules={[Thumbs, Virtual]}
+                            loop={true}
+                            centeredSlides={true}
+                            spaceBetween={0}
+                            thumbs={{ swiper: thumbsSwiper }}
+                    >
+                        {
+                            slides.map((image, index) => (
+                                <SwiperSlide key={index + uuidv4()} virtualIndex={index} className={styles.slide}>
+                                    <Image src={`/gallery/${image}`} fill alt="Фото продукта" placeholder="blur"
+                                            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="/>
+                                </SwiperSlide>
+                            ))
+                        }
+                        <GalleryButtonPrev />
+                        <GalleryButtonNext/>
+                    </Swiper>
+                    
+                    <Swiper className={styles.thumbSlider}
+                            slidesPerView={'auto'}
+                            modules={[Thumbs, Virtual]}
+                            spaceBetween={10}
+                            loop={true}
+                            watchSlidesProgress
+                            // @ts-ignore
+                            onSwiper={setThumbsSwiper} updateOnImagesReady={true} >
+                        {
+                            thumbsSlides.map((image, index) => (
+                                <SwiperSlide key={index + uuidv4()} virtualIndex={index} className={styles.thumbSlide}>
+                                    <Image className={styles.thumbSlideImage} src={`/gallery/${image}`} fill alt="Фото продукта"/>
+                                </SwiperSlide>
+                            ))
+                        }
+                    </Swiper>  
+                </>
+            )}
         </>
     )
 }
