@@ -15,7 +15,7 @@ const Map = () => {
     return (
         <>
             <div style={{ height: '400px' }}>
-                <YMapComponentsProvider apiKey={'cac5b520-ec6d-4f80-b8a5-eb55d0da1f0a'}>
+                <YMapComponentsProvider apiKey='cac5b520-ec6d-4f80-b8a5-eb55d0da1f0a'>
                     <YMap location={location}>
                         <YMapDefaultSchemeLayer />
                         <YMapDefaultFeaturesLayer />
