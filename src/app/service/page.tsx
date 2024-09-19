@@ -4,6 +4,11 @@ import styles from "../styles/sections/service/service.module.scss";
 import contactsStyles from "../styles/sections/service-contacts/service-contacts.module.scss";
 import mapStyles from "../styles/sections/service-map/service-map.module.scss";
 import Button from "@/components/button/button";
+import dynamic from "next/dynamic";
+
+const Map = dynamic(async () => import('../../components/map/map'), {
+    ssr: false,
+});
 
 export default async function Page() {
     return (
@@ -25,7 +30,7 @@ export default async function Page() {
                 <Heading>Авторизованные СТО</Heading>
                 <Container>
                     <div className={mapStyles.serviceMapWrapper}>
-                        
+                        <Map />
                     </div>
                 </Container>
             </section>
