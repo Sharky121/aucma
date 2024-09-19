@@ -31,7 +31,7 @@ export default function RootLayout({
         
         <Callback />
         <Footer />
-        <YMapLoader />
+
         {/* SVG-ICONS */}
         <div style={{ display: "none" }}>
           <svg preserveAspectRatio="xMinYMid">
