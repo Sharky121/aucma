@@ -1,0 +1,104 @@
+@use '../../app/styles/abstract' as var;
+
+.documents {
+    color: var.$brand-danger;
+}
+
+.documentsList,
+.documentsFilesList {
+    @extend %list-reset;
+}
+
+.documentsItem {
+    border: 2px solid var.$brand-danger;
+
+    &:not(:first-child) {
+        border-top: none;
+    }
+}
+
+.documentsItemHeader {
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.documentsItemHeader,
+.documentsItemBody {
+    padding: 30px 20px;
+}
+
+.documentsItemTitle {
+    font-size: 18px;
+}
+
+.documentsFileItem {
+    margin-bottom: 30px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.documentsFile {
+    position: relative;
+
+    display: inline-block;
+    padding-left: 40px;
+
+    font-size: 16px;
+    text-decoration: underline;
+    font-weight: 700;
+    vertical-align: middle;
+
+    &::before {
+        content: '';
+
+        position: absolute;
+        left: 0;
+        top: 50%;
+
+        display: block;
+        width: 24px;
+        height: 24px;
+        margin-top: -12px;
+
+        background-image: url('/ico-pdf.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+@include var.tablet-size {
+
+    .documentsItemHeader {
+        padding: 35px 20px;
+    }
+
+    .documentsItemBody {
+        padding-top: 10px;
+    }
+}
+
+@include var.desktop-size {
+
+    .documentsFilesList {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 30px;
+        max-height: 165px;
+    }
+
+    .documentsFileItem {
+        margin-bottom: 0;
+    }
+}
