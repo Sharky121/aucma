@@ -8,10 +8,8 @@ import '../../app/styles/libs/brand-swiper.scss';
 import { v4 as uuidv4 } from 'uuid';
 
 import styles from './gallery.module.scss';
-import Loading from "../loading/loading";
 
 const Gallery = () => {
-    const [loading, setLoading] = useState(true);
     const galleryRef = useRef(null);
     const thumbsRef = useRef(null);
     const [images, setImages] = useState([

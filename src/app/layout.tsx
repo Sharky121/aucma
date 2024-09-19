@@ -4,7 +4,6 @@ import "./styles/globals.scss";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import Callback from "@/components/callback/callback";
-import YMapLoader from "@/components/map/ymap-loader";
 
 const montserrat = Montserrat({ 
   subsets: ["latin"],

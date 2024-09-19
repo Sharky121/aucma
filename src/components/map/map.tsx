@@ -7,14 +7,15 @@ import {
   YMapComponentsProvider,
   YMapDefaultMarker
 } from "ymap3-components";
+import styles from "./map.module.scss";
 
-const location = { center: [37.95, 55.65], zoom: 10 };
+const location = { center: [55.381915, 37.583760], zoom: 10 };
 
 const Map = () => {
 
     return (
         <>
-            <div style={{ height: '400px' }}>
+            <div className={styles.mapContainer}>
                 <YMapComponentsProvider apiKey='cac5b520-ec6d-4f80-b8a5-eb55d0da1f0a'>
                     <YMap location={location}>
                         <YMapDefaultSchemeLayer />
