@@ -5,11 +5,30 @@
     padding-bottom: 20px;
 }
 
+.politicsContainer {
+
+    ol {
+        list-style: none;
+        counter-reset: outline;
+        padding-left: 0;
+      }
+      
+      ol li {
+        counter-increment: outline;
+      }
+      
+      ol li::before {
+        content: counters(outline, ".") ". "; 
+
+      }
+}
+
 .politicsItem {
     margin-bottom: 20px;
 
     h4 {
-        margin-bottom: 20px;
+        display: inline-block;
+        margin-bottom: 15px;
 
         font-weight: 400;
     }
@@ -36,5 +55,20 @@
     .politics {
         padding-top: 60px;
         padding-bottom: 60px;
+    }
+
+    .politicsList {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        max-height: 3500px;
+        gap: 0 40px;
+    }
+
+    .politicsItem {
+        width: calc((100% - 40px) / 2);
+        margin: 0;
     }
 }

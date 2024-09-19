@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import Button from '../button/button';
 import Container from '../container/container';
@@ -32,8 +34,8 @@ const Callback = () => {
                     <div className={formStyles.form__footer}>
                         <div className={checkboxStyles.checkbox}>
                             <label htmlFor='confirm'>
-                                <input id='confirm' name='confirm' type='checkbox' checked/>
-                                <span>Я согласен с условиями обработки <Link href={''}>персональных данных</Link></span>
+                                <input id='confirm' name='confirm' type='checkbox' checked onChange={() => console.log('change')}/>
+                                <span>Я согласен с условиями обработки <Link href={'/politics'}>персональных данных</Link></span>
                             </label>
                         </div>
                         <Button isButton={true} text={'Отправить'} type={'submit'}/>
