@@ -35,7 +35,7 @@ const DocumentItem = ({title, files, slug}: IDocumentItem) => {
                                 {
                                     files.map(({title, url}, index) => (
                                         <li key={index} className={styles.documentsFileItem}>
-                                            <Link className={styles.documentsFile} href={`/${slug}/${url}.pdf`} target="_blank">
+                                            <Link className={styles.documentsFile} href={`/documents/${slug}/${url}.pdf`} target="_blank">
                                                 {title}
                                             </Link>
                                         </li>
