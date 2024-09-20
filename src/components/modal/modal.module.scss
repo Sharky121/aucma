@@ -43,6 +43,10 @@
     border-radius: 10px;
 }
 
+.modalSuccess {
+    height: auto;
+}
+
 .modalWrapper {
     position: relative;
 
@@ -75,4 +79,9 @@
 .modalTitle {
     font-size: 20px;
     text-transform: uppercase;
+}
+
+.modalSubTitle {
+    margin-top: 15px;
+    margin-bottom: 40px;
 }

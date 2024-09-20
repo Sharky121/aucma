@@ -3,8 +3,8 @@ import Heading from '@/components/heading/heading';
 import styles from '../styles/sections/buy/buy.module.scss';
 import stylesLeasing from '../styles/sections/leasing/leasing.module.scss';
 import Container from '@/components/container/container';
-import Button from '@/components/button/button';
 import Link from "next/link";
+import ButtonOffer from "@/components/button/button-offer";
 
 export default async function Page() {
     return (
@@ -15,7 +15,7 @@ export default async function Page() {
                     <div className={styles.buyCard}>
                         <h3 className={styles.buyCardTitle}>Получите коммерческое предложение</h3>
                         <p className={styles.buyCardSubTitle}>Оставьте адрес электронной почты, и наш <br /> менеджер сразу же вышлет вам коммерческое <br /> предложение.</p>
-                        <Button text="Получить КП"/>
+                        <ButtonOffer title="Получить КП"/>
                     </div>
                 </Container>
             </section>

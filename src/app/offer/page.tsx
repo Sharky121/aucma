@@ -3,6 +3,7 @@ import styles from "../styles/sections/offer/offer.module.scss";
 import stylesCommercial from "../styles/sections/commercial/commercial.module.scss";
 import Container from "@/components/container/container";
 import Button from "@/components/button/button";
+import ButtonOffer from "@/components/button/button-offer";
 
 export default async function Page() {
     return (
@@ -27,7 +28,7 @@ export default async function Page() {
                 <Heading>Получите коммерческое предложение</Heading>
                 <Container customClassName={stylesCommercial.commercialContainer}>
                     <p className={stylesCommercial.commercialText}>Оставьте адрес электронной почты, и наш менеджер <br />сразу же вышлет вам коммерческое предложение</p>
-                    <Button text="Получить КП" />
+                    <ButtonOffer title="Получить КП"/>
                 </Container>
             </section>
         </>
