@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Thumbs, Virtual, Navigation } from 'swiper/modules';
+
 import '../../app/styles/libs/brand-swiper.scss';
 import styles from './gallery.module.scss';
 import GalleryButtonPrev from './gallery-button-prev';

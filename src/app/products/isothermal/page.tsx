@@ -5,6 +5,8 @@ import Button from "@/components/button/button";
 import style from "../../styles/sections/product/product.module.scss";
 import Gallery from "@/components/gallery/gallery";
 import Link from "next/link";
+import ButtonCallback from "@/components/button/button-callback";
+import ButtonOffer from "@/components/button/button-offer";
 
 const Product =  {
     "title": "Изотермический полуприцеп",
@@ -176,15 +178,15 @@ export default async function Page() {
                     <ul>
                         <li>
                             <p>Заполните форму заказа и наши менеджеры обязательно свяжутся с вами:</p>
-                            <Button customClass={style.productOrderButton} text="Отправить запрос"/>
+                            <ButtonOffer customClass={style.productOrderButton} title="Отправить запрос"/>
                         </li>
                         <li>
                             <p>Телефон для заказа: <br /> <b>+7 (499) 677 65 43</b>. Звоните, или закажите обратный звонок</p>
-                            <Button customClass={style.productOrderButton} text="Обратный звонок"/>
+                            <ButtonCallback customClass={style.productOrderButton}></ButtonCallback>
                         </li>
                         <li>
                             <p>Воспользуйтесь нашими финансовыми инструментами получите беспроцентный кредит:</p>
-                            <Button customClass={style.productOrderButton} text="Лизинг" url="buy"/>
+                            <Button customClass={style.productOrderButton} text="Лизинг" url="/buy"/>
                         </li>
                     </ul>
                 </Container>

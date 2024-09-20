@@ -6,6 +6,7 @@ import mapStyles from "../styles/sections/service-map/service-map.module.scss";
 import Button from "@/components/button/button";
 import dynamic from "next/dynamic";
 import Map from "@/components/map/map";
+import ButtonOffer from "@/components/button/button-offer";
 
 
 export default async function Page() {
@@ -49,10 +50,10 @@ export default async function Page() {
 
                     <ul className={contactsStyles.serviceContactButtonsList}>
                         <li className={contactsStyles.serviceContactButtonsItem}>
-                            <Button text="Связаться с тех. специалистом"/>
+                            <ButtonOffer title="Связаться с тех. специалистом" modalTitle="Связаться с тех. специалистом"/>
                         </li>
                         <li className={contactsStyles.serviceContactButtonsItem}>
-                            <Button text="Стать партнером"/>
+                            <ButtonOffer title="Стать партнером" modalTitle="Стать партнером"/>
                         </li>
                     </ul>
                 </Container>
