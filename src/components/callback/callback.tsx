@@ -96,7 +96,7 @@ const Callback = () => {
                         </div>
                     </form>
                 </Container>
-            </section>s
+            </section>
 
             {
                 isOpen && (
