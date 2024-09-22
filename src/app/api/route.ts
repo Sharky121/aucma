@@ -48,12 +48,12 @@ export async function POST(request: Request, response: Response) {
     const client = new postmark.ServerClient("97a9265c-a1b9-4930-876e-c50a4279686f");
     let userMessage = '';
 
-    client.sendEmail({
-      "From": "sender@www.aucma-rus.ru",
-      "To": "Sharky121@mail.ru",
-      "Subject": "Test",
-      "TextBody": "Hello from Postmark!"
-    });
+    // client.sendEmail({
+    //   "From": "sender@www.aucma-rus.ru",
+    //   "To": "Sharky121@mail.ru",
+    //   "Subject": "Test",
+    //   "TextBody": "Hello from Postmark!"
+    // });
 
     const emailDetails = {
       to: 'Sharky121@mail.ru',
