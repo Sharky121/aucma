@@ -6,6 +6,8 @@ export async function POST(request: Request, response: Response) {
 
     const { name, email, message } = formData;
 
+    let userMessage = '';
+
     // Конфигурация для Postmark
     // const transporter = nodemailer.createTransport({
     //   host: 'smtp.postmarkapp.com',
@@ -17,45 +19,35 @@ export async function POST(request: Request, response: Response) {
     //   }
     // });
 
-    // const transporter = nodemailer.createTransport({
-    //   service: "Gmail",
-    //   host: "smtp.gmail.com",
-    //   port: 465,
-    //   secure: true,
-    //   auth: {
-    //     user: "loginov.dmitry86@gmail.com",
-    //     pass: "GvnSdWjQ9771488",
-    //   },
-    // });
+    const transporter = nodemailer.createTransport({
+      service: "Gmail",
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true,
+      auth: {
+        user: "loginov.dmitry86@gmail.com",
+        pass: "GvnSdWjQ9771488",
+      },
+    });
 
-
-    // Отправляем письмо
     const mailOptions = {
-      from: 'Ваше Имя <noreply@aucma-rus.ru>', // "Отправитель" - используйте свой собственный домен
-      to: 'Sharky121@mail.ru', // Получатель
-      subject: 'Новое сообщение из формы обратной связи',
-      text: 'test'
+      to: 'Sharky121@mail.ru',
+      from: 'sender@www.aucma-rus.ru',
+      subject: 'New contact form submission',
+      message: 'test sdfdsf',
+      TextBody: 'test sdfdsf'
     };
 
-    // try {
-    //     await transporter.sendMail(mailOptions);
-    // } catch (error) {
-    //     console.error(error);
-    // }
-
-// Require:
-
+    try {
+        await transporter.sendMail(mailOptions);
+        userMessage = 'Отправлено';
+    } catch (error) {
+        userMessage = `${error}`;
+    }
 
   // Send an email:
     // const client = new postmark.ServerClient("97a9265c-a1b9-4930-876e-c50a4279686f");
-    let userMessage = '';
-
-    // client.sendEmail({
-    //   "From": "sender@www.aucma-rus.ru",
-    //   "To": "Sharky121@mail.ru",
-    //   "Subject": "Test",
-    //   "TextBody": "Hello from Postmark!"
-    // });
+    
 
     // const emailDetails = {
     //   to: 'Sharky121@mail.ru',
@@ -65,30 +57,7 @@ export async function POST(request: Request, response: Response) {
     //   TextBody: 'test sdfdsf'
     // };
 
-  
-    const transporter = nodemailer.createTransport({
-      host: 'smtp.ethereal.email',
-      port: 587,
-      auth: {
-          user: 'dorothy.homenick@ethereal.email',
-          pass: 'NsetGSecpGbtasseNU'
-      }
-    });
 
-    transporter.sendMail(mailOptions, (error: { message: any; }, info: { response: any; }) => {
-      if (error) {
-        userMessage = error.message;
-        console.error('❌ Error:', error.message);
-      } else {
-        userMessage = info.response;
-      }
-    });
-    // try {
-    //   await client.sendEmail(emailDetails);
-    //   userMessage = 'Email sent successfully!';
-    // } catch (error) {
-    //   userMessage =`Error sending email: ${error}`;
-    // }
 
     return Response.json(userMessage);
   }
