@@ -75,9 +75,9 @@ export async function POST(request: Request, response: Response) {
     // Send the email
     transporter.sendMail(mailOptions, (error: { message: any; }, info: { response: any; }) => {
       if (error) {
-        console.error('❌ Error:', error.message);
+        userMessage = `❌ Error: ${error.message}`;
       } else {
-        console.log('✅ Email sent:', info.response);
+        userMessage = `✅ Email sent: ${info.response}`;
       }
     });
 
