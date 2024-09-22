@@ -6,15 +6,15 @@ export async function POST(request: Request, response: Response) {
     const { name, email, message } = formData;
 
     // Конфигурация для Postmark
-    // const transporter = nodemailer.createTransport({
-    //   host: 'smtp.postmarkapp.com',
-    //   port: 587,
-    //   secure: false, 
-    //   auth: {
-    //     user: '97a9265c-a1b9-4930-876e-c50a4279686f', 
-    //     pass: '97a9265c-a1b9-4930-876e-c50a4279686f'
-    //   }
-    // });
+    const transporter = nodemailer.createTransport({
+      host: 'smtp.postmarkapp.com',
+      port: 587,
+      secure: false, 
+      auth: {
+        user: '97a9265c-a1b9-4930-876e-c50a4279686f', 
+        pass: '97a9265c-a1b9-4930-876e-c50a4279686f'
+      }
+    });
 
   //   const transporter = nodemailer.createTransport({
   //     host: 'smtp.mail.ru',
@@ -28,18 +28,18 @@ export async function POST(request: Request, response: Response) {
 
 
     // Отправляем письмо
-    // const mailOptions = {
-    //   from: 'Ваше Имя <noreply@aucma-rus.ru>', // "Отправитель" - используйте свой собственный домен
-    //   to: 'Sharky121@mail.ru', // Получатель
-    //   subject: 'Новое сообщение из формы обратной связи',
-    //   text: 'test'
-    // };
+    const mailOptions = {
+      from: 'Ваше Имя <noreply@aucma-rus.ru>', // "Отправитель" - используйте свой собственный домен
+      to: 'Sharky121@mail.ru', // Получатель
+      subject: 'Новое сообщение из формы обратной связи',
+      text: 'test'
+    };
 
-    // try {
-    //     await transporter.sendMail(mailOptions);
-    // } catch (error) {
-    //     console.error(error);
-    // }
+    try {
+        await transporter.sendMail(mailOptions);
+    } catch (error) {
+        console.error(error);
+    }
 
     return Response.json('Ответ с сервера');
   }
