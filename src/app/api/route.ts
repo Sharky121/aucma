@@ -20,13 +20,12 @@ export async function POST(request: Request, response: Response) {
     // });
 
     const transporter = nodemailer.createTransport({
-      service: "Gmail",
-      host: "smtp.gmail.com",
+      host: 'smtp.mail.ru',
       port: 465,
       secure: true,
       auth: {
-        user: "loginov.dmitry86@gmail.com",
-        pass: "GvnSdWjQ9771488",
+        user: 'loginov@cherryline.ru',
+        pass: 'k6vwcT5b3QiddxcRMjbT',
       },
     });
 
