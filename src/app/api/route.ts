@@ -25,7 +25,7 @@ export async function POST(request: Request, response: Response) {
       secure: true,
       auth: {
         user: 'Sharky121@mail.ru',
-        pass: 'Rt2JzAEHzMuUyTHLzrRy',
+        pass: 'GvnSdWjQ9771488',
       },
     });
 
