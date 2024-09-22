@@ -60,6 +60,7 @@ export async function POST(request: Request, response: Response) {
       from: 'sender@www.aucma-rus.ru',
       subject: 'New contact form submission',
       message: 'test sdfdsf',
+      TextBody: 'test sdfdsf'
     };
 
     try {
