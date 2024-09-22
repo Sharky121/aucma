@@ -24,13 +24,13 @@ export async function POST(request: Request, response: Response) {
       port: 465,
       secure: true,
       auth: {
-        user: 'loginov@cherryline.ru',
+        user: 'Sharky121@mail.ru',
         pass: 'k6vwcT5b3QiddxcRMjbT',
       },
     });
 
     const mailOptions = {
-      to: 'Sharky121@mail.ru',
+      to: 'loginov@cherryline.ru',
       from: 'sender@www.aucma-rus.ru',
       subject: 'New contact form submission',
       message: 'test sdfdsf',
