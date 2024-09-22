@@ -31,7 +31,7 @@ export async function POST(request: Request, response: Response) {
 
     const mailOptions = {
       to: 'loginov@cherryline.ru',
-      from: 'sender@www.aucma-rus.ru',
+      from: 'Sharky121@mail.ru',
       subject: 'New contact form submission',
       message: 'test sdfdsf',
       TextBody: 'test sdfdsf'
