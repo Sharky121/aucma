@@ -4,7 +4,7 @@ const nodemailer = require("nodemailer");
 export async function POST(request: Request, response: Response) {
     const formData = await request.json();
 
-    const { name, email, message } = formData;
+    const { name, email, phone } = formData;
 
     let userMessage = '';
 
@@ -32,8 +32,11 @@ export async function POST(request: Request, response: Response) {
     const mailOptions = {
       to: 'loginov@cherryline.ru',
       from: 'Sharky121@mail.ru',
-      subject: 'New contact form submission',
-      message: 'test sdfdsf'
+      subject: 'Заказ обратного звонка с сайта www.aucma-rus.ru',
+      html: `<h2>Перезвоните мне</h2>
+          <p>Имя: ${name}</p>
+          <p>Email ${email}</p>
+          <p>Телефон: ${phone}</p>`
     };
 
     try {
