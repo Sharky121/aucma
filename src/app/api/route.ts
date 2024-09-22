@@ -25,7 +25,7 @@ export async function POST(request: Request, response: Response) {
       secure: true,
       auth: {
         user: 'Sharky121@mail.ru',
-        pass: 'GvnSdWjQ9771488',
+        pass: 'C2vrhra8EqcfpurDz1sg',
       },
     });
 
@@ -33,8 +33,7 @@ export async function POST(request: Request, response: Response) {
       to: 'loginov@cherryline.ru',
       from: 'Sharky121@mail.ru',
       subject: 'New contact form submission',
-      message: 'test sdfdsf',
-      TextBody: 'test sdfdsf'
+      message: 'test sdfdsf'
     };
 
     try {
