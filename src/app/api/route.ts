@@ -54,5 +54,17 @@ export async function POST(request: Request, response: Response) {
       "TextBody": "Hello from Postmark!"
     });
 
-    return Response.json('Ответ с сервера');
+    const emailDetails = {
+      to: 'Sharky121@mail.ru',
+      from: 'sender@www.aucma-rus.ru',
+      subject: 'New contact form submission',
+      message: 'test sdfdsf',
+    };
+
+    try {
+      await client.sendEmail(emailDetails);
+      return Response.json('Email sent successfully!');
+    } catch (error) {
+      return Response.json(`Error sending email: ${error}`,);
+    }
   }
