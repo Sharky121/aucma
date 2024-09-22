@@ -17,25 +17,25 @@ export async function POST(request: Request, response: Response) {
     //   }
     // });
 
-    const transporter = nodemailer.createTransport({
-      service: "Gmail",
-      host: "smtp.gmail.com",
-      port: 465,
-      secure: true,
-      auth: {
-        user: "loginov.dmitry86@gmail.com",
-        pass: "GvnSdWjQ9771488",
-      },
-    });
+    // const transporter = nodemailer.createTransport({
+    //   service: "Gmail",
+    //   host: "smtp.gmail.com",
+    //   port: 465,
+    //   secure: true,
+    //   auth: {
+    //     user: "loginov.dmitry86@gmail.com",
+    //     pass: "GvnSdWjQ9771488",
+    //   },
+    // });
 
 
     // Отправляем письмо
-    // const mailOptions = {
-    //   from: 'Ваше Имя <noreply@aucma-rus.ru>', // "Отправитель" - используйте свой собственный домен
-    //   to: 'Sharky121@mail.ru', // Получатель
-    //   subject: 'Новое сообщение из формы обратной связи',
-    //   text: 'test'
-    // };
+    const mailOptions = {
+      from: 'Ваше Имя <noreply@aucma-rus.ru>', // "Отправитель" - используйте свой собственный домен
+      to: 'Sharky121@mail.ru', // Получатель
+      subject: 'Новое сообщение из формы обратной связи',
+      text: 'test'
+    };
 
     // try {
     //     await transporter.sendMail(mailOptions);
@@ -65,22 +65,24 @@ export async function POST(request: Request, response: Response) {
     //   TextBody: 'test sdfdsf'
     // };
 
-    const mailOptions = {
-      to: 'Sharky121@mail.ru',
-      from: 'sender@www.aucma-rus.ru',
-      subject: '👋 Hello from Node.js 🚀',
-      text: 'This is a test email sent from Node.js using nodemailer. 📧💻'
-    };
-    
-    // Send the email
-    transporter.sendMail(mailOptions, (error: { message: any; }, info: { response: any; }) => {
-      if (error) {
-        userMessage = `❌ Error: ${error.message}`;
-      } else {
-        userMessage = `✅ Email sent: ${info.response}`;
+  
+    const transporter = nodemailer.createTransport({
+      host: 'smtp.ethereal.email',
+      port: 587,
+      auth: {
+          user: 'dorothy.homenick@ethereal.email',
+          pass: 'NsetGSecpGbtasseNU'
       }
     });
 
+    transporter.sendMail(mailOptions, (error: { message: any; }, info: { response: any; }) => {
+      if (error) {
+        userMessage = error.message;
+        console.error('❌ Error:', error.message);
+      } else {
+        userMessage = info.response;
+      }
+    });
     // try {
     //   await client.sendEmail(emailDetails);
     //   userMessage = 'Email sent successfully!';
