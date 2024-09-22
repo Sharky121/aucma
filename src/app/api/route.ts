@@ -69,5 +69,5 @@ export async function POST(request: Request, response: Response) {
       userMessage =`Error sending email: ${error}`;
     }
 
-    return Response.json('Email sent successfully!');
+    return Response.json(userMessage);
   }
