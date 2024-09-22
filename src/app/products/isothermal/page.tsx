@@ -59,6 +59,14 @@ const Product =  {
     ]
 }
 
+const slides = Array.from({ length: 28 }).map(
+    (el, index) => `product_${index + 1}.jpg`
+);
+    
+const thumbsSlides = Array.from({ length: 28 }).map(
+    (el, index) => `product_thumbs_${index + 1}.jpg`
+);
+
 export default async function Page() {
     return (
         <>
@@ -81,7 +89,7 @@ export default async function Page() {
                 </div>
 
                 <div className={style.productGallery} id="gallery">
-                    <Gallery />
+                    <Gallery slides={slides} thumbs={thumbsSlides}/>
                 </div>
             </section>
 

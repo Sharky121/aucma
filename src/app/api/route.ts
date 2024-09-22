@@ -8,6 +8,11 @@ export async function POST(request: Request, response: Response) {
 
     let userMessage = '';
 
+    const mailMessage = `
+      <p>Имя: ${name}</p>
+      <p>Email ${email}</p>
+      <p>Телефон: ${phone}</p>`;
+
     // Конфигурация для Postmark
     // const transporter = nodemailer.createTransport({
     //   host: 'smtp.postmarkapp.com',
@@ -30,13 +35,10 @@ export async function POST(request: Request, response: Response) {
     });
 
     const mailOptions = {
-      to: 'loginov@cherryline.ru',
+      to: 'loginov@cherryline.ru, info@aucma-rus.ru',
       from: 'Sharky121@mail.ru',
-      subject: 'Заказ обратного звонка с сайта www.aucma-rus.ru',
-      html: `<h2>Перезвоните мне</h2>
-          <p>Имя: ${name}</p>
-          <p>Email ${email}</p>
-          <p>Телефон: ${phone}</p>`
+      subject: 'Обратная связь с сайта www.aucma-rus.ru',
+      html: mailMessage
     };
 
     try {
@@ -57,8 +59,6 @@ export async function POST(request: Request, response: Response) {
     //   message: 'test sdfdsf',
     //   TextBody: 'test sdfdsf'
     // };
-
-
 
     return Response.json(userMessage);
   }

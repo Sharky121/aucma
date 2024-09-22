@@ -1,4 +1,5 @@
 @use '../abstract' as var;
+@use 'swiper/css';
 @use 'swiper/css/navigation';
 
 @include var.tablet-size {

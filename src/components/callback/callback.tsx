@@ -17,7 +17,7 @@ interface IFormData {
 }
 
 const Callback = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isSuccessOpen, setIsSuccessOpen] = useState(false);
     const [isChecked, setIsChecked] = useState(true);
     const [formData, setFormData] = useState({
         name: '',
@@ -36,7 +36,7 @@ const Callback = () => {
             });
 
             if (response.ok) {
-                console.log('Отправлено с front');
+                setIsSuccessOpen(true);
             } else {
                 console.log('Ошибка в try');
             }
@@ -69,15 +69,15 @@ const Callback = () => {
                         <ul className={formStyles.form__list}>
                             <li className={formStyles.form__item}>
                                 <label className="visually-hidden" htmlFor='name'>Имя</label>
-                                <input onChange={handleInputChange} className={formStyles.input} value={formData.name} placeholder='Имя' id='name' name='name' minLength={2} maxLength={12} type="text"/>
+                                <input onChange={handleInputChange} className={formStyles.input} value={formData.name} placeholder='Имя' id='name' name='name' minLength={2} maxLength={12} type="text" required/>
                             </li>
                             <li className={formStyles.form__item}>
                                 <label className="visually-hidden" htmlFor='phone'>Телефон</label>
-                                <input onChange={handleInputChange} className={formStyles.input} value={formData.phone} placeholder='Телефон' id='phone' name='phone' type="phone"/>
+                                <input onChange={handleInputChange} className={formStyles.input} value={formData.phone} placeholder='Телефон' id='phone' name='phone' type="phone" required/>
                             </li>
                             <li className={formStyles.form__item}>
                                 <label className="visually-hidden" htmlFor='email'>Электронная почта</label>
-                                <input onChange={handleInputChange} className={formStyles.input} value={formData.email} placeholder='Электронная почта' id='email' name='email' type="email"/>
+                                <input onChange={handleInputChange} className={formStyles.input} value={formData.email} placeholder='Электронная почта' id='email' name='email' type="email" required/>
                             </li>
                         </ul>
                         <div className={formStyles.form__footer}>
@@ -99,8 +99,8 @@ const Callback = () => {
             </section>
 
             {
-                isOpen && (
-                    <SuccessModal title="Спасибо" onClose={() => setIsOpen(false)}>
+                isSuccessOpen && (
+                    <SuccessModal title="Спасибо" onClose={() => setIsSuccessOpen(false)}>
                         <p>В ближайшее время наш менеджер свяжется с вами!</p>
                     </SuccessModal>
                 )

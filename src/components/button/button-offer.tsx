@@ -18,13 +18,46 @@ interface IButtonOffer {
 
 const ButtonOffer = ({customClass, title, modalTitle}: IButtonOffer) => {
     const [isOpen, setIsOpen] = useState(false);
-    const [isSuccess, setIsSuccess] = useState(false);
+    const [isSuccessOpen, setIsSuccessOpen] = useState(false);
+    const [isChecked, setIsChecked] = useState(true);
+    const [formData, setFormData] = useState({
+        name: '',
+        phone: '',
+        email: ''
+    });
 
-    const handlerSubmit = () => {
-        setIsOpen(false);
-        setIsSuccess(true);
+    const submitForm = async (evt: { preventDefault: () => void; }) => {
+        evt.preventDefault();
+        
+        try {
+            const response = await fetch('/api', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            });
+
+            if (response.ok) {
+                setIsOpen(false);
+                setIsSuccessOpen(true);
+            } else {
+                console.log('Ошибка в try');
+            }
+        } catch (error) {
+            console.log('Ошибка catch');
+        }
     }
-    
+
+    const checkInputHandler = () => {
+        setIsChecked(!isChecked)
+    }
+
+    const handleInputChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
+        setFormData({
+            ...formData, 
+            [evt.target.name]: evt.target.value
+        })
+    }
+
     return (
         <>
             <Button text={`${title ?? 'Получить коммерческое предложение'}`} customClass={customClass} isButton type="button" onClick={() => setIsOpen(true)}/>
@@ -32,29 +65,34 @@ const ButtonOffer = ({customClass, title, modalTitle}: IButtonOffer) => {
             {
                 isOpen && (
                     <Modal title={`${modalTitle ?? 'Получить коммерческое предложение'}`} onClose={() => setIsOpen(false)}>
-                        <form action=''>
+                        <form onSubmit={submitForm}>
                             <ul className={formStyles.form__list}>
                                 <li className={formStyles.form__item}>
                                     <label className="visually-hidden" htmlFor='name'>Имя</label>
-                                    <input className={formStyles.input} placeholder='Имя' id='name' name='name' minLength={2} maxLength={12} type="text"/>
+                                    <input onChange={handleInputChange} className={formStyles.input} placeholder='Имя' id='name' name='name' minLength={2} maxLength={12} type="text" required/>
                                 </li>
                                 <li className={formStyles.form__item}>
                                     <label className="visually-hidden" htmlFor='phone'>Телефон</label>
-                                    <input className={formStyles.input} placeholder='Телефон' id='phone' name='phone' type="number"/>
+                                    <input onChange={handleInputChange} className={formStyles.input} placeholder='Телефон' id='phone' name='phone' type="number" required/>
                                 </li>
                                 <li className={formStyles.form__item}>
                                     <label className="visually-hidden" htmlFor='email'>Электронная почта</label>
-                                    <input className={formStyles.input} placeholder='Электронная почта' id='email' name='email' type="email"/>
+                                    <input onChange={handleInputChange} className={formStyles.input} placeholder='Электронная почта' id='email' name='email' type="email" required/>
                                 </li>
                             </ul>
                             <div className={formStyles.form__footer}>
                                 <div className={checkboxStyles.checkbox}>
                                     <label htmlFor='confirm'>
-                                        <input id='confirm' name='confirm' type='checkbox' checked/>
+                                    <input 
+                                        id='confirm' 
+                                        name='confirm'
+                                        type='checkbox'
+                                        checked={isChecked}
+                                        onChange={checkInputHandler}/>
                                         <span>Я согласен с условиями обработки <Link href={'/politics'}>персональных данных</Link></span>
                                     </label>
                                 </div>
-                                <Button isButton={true} text={'Отправить'} type="button" onClick={handlerSubmit}/>
+                                <Button isButton={true} text={'Отправить'} type="submit"/>
                             </div>
                         </form>
                     </Modal>
@@ -62,8 +100,8 @@ const ButtonOffer = ({customClass, title, modalTitle}: IButtonOffer) => {
             }
 
             {
-                isSuccess && (
-                    <SuccessModal title="Спасибо" onClose={() => setIsSuccess(false)}>
+                isSuccessOpen && (
+                    <SuccessModal title="Спасибо" onClose={() => setIsSuccessOpen(false)}>
                         <p>В ближайшее время наш менеджер свяжется с вами!</p>
                     </SuccessModal>
                 )
