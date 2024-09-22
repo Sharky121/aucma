@@ -45,7 +45,8 @@ export async function POST(request: Request, response: Response) {
 
 
   // Send an email:
-    var client = new postmark.ServerClient("97a9265c-a1b9-4930-876e-c50a4279686f");
+    const client = new postmark.ServerClient("97a9265c-a1b9-4930-876e-c50a4279686f");
+    let userMessage = '';
 
     client.sendEmail({
       "From": "sender@www.aucma-rus.ru",
@@ -63,8 +64,10 @@ export async function POST(request: Request, response: Response) {
 
     try {
       await client.sendEmail(emailDetails);
-      return Response.json('Email sent successfully!');
+      userMessage = 'Email sent successfully!';
     } catch (error) {
-      return Response.json(`Error sending email: ${error}`,);
+      userMessage =`Error sending email: ${error}`;
     }
+
+    return Response.json('Email sent successfully!');
   }
