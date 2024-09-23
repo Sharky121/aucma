@@ -1,4 +1,3 @@
-// var postmark = require("postmark");
 const nodemailer = require("nodemailer");
 
 export async function POST(request: Request, response: Response) {
@@ -13,30 +12,20 @@ export async function POST(request: Request, response: Response) {
       <p>Email ${email}</p>
       <p>Телефон: ${phone}</p>`;
 
-    // Конфигурация для Postmark
-    // const transporter = nodemailer.createTransport({
-    //   host: 'smtp.postmarkapp.com',
-    //   port: 587,
-    //   secure: false, 
-    //   auth: {
-    //     user: '97a9265c-a1b9-4930-876e-c50a4279686f', 
-    //     pass: '97a9265c-a1b9-4930-876e-c50a4279686f'
-    //   }
-    // });
 
     const transporter = nodemailer.createTransport({
-      host: 'smtp.mail.ru',
-      port: 465,
+      host: process.env.WEB_MAILER_SMTP,
+      port: process.env.WEB_MAILER_PORT,
       secure: true,
       auth: {
-        user: 'Sharky121@mail.ru',
-        pass: 'C2vrhra8EqcfpurDz1sg',
+        user: process.env.WEB_MAILER,
+        pass: process.env.WEB_MAILER_PASSWORD,
       },
     });
 
     const mailOptions = {
-      to: 'loginov@cherryline.ru, info@aucma-rus.ru',
-      from: 'Sharky121@mail.ru',
+      to: process.env.WEB_MAILER_TO,
+      from: process.env.WEB_MAILER_FROM,
       subject: 'Обратная связь с сайта www.aucma-rus.ru',
       html: mailMessage
     };
@@ -47,18 +36,6 @@ export async function POST(request: Request, response: Response) {
     } catch (error) {
         userMessage = `${error}`;
     }
-
-  // Send an email:
-    // const client = new postmark.ServerClient("97a9265c-a1b9-4930-876e-c50a4279686f");
-    
-
-    // const emailDetails = {
-    //   to: 'Sharky121@mail.ru',
-    //   from: 'sender@www.aucma-rus.ru',
-    //   subject: 'New contact form submission',
-    //   message: 'test sdfdsf',
-    //   TextBody: 'test sdfdsf'
-    // };
 
     return Response.json(userMessage);
   }

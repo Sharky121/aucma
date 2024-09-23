@@ -26,7 +26,9 @@ const SuccessModal = ({children, title, onClose}: IModal) => {
                     <div className={styles.body}>
                         <Image className={styles.modalLogo} src={'/logo.svg'} width={200} height={46} alt="Лого Aucma"/>
                         <h3 className={styles.modalTitle}>{title}</h3>
-                        <p className={styles.modalSubTitle}>{children}</p>
+                        <div className={styles.modalSubTitle}>
+                            {children}
+                        </div>
 
                         <Button text="Прекрасно" isButton={true} onClick={onClose}/>
                     </div>
