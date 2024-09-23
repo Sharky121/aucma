@@ -12,6 +12,7 @@ export async function POST(request: Request, response: Response) {
       <p>Email ${email}</p>
       <p>Телефон: ${phone}</p>`;
 
+    console.log(process.env);
 
     const transporter = nodemailer.createTransport({
       host: process.env.WEB_MAILER_SMTP,
