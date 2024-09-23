@@ -1,7 +1,8 @@
 import Heading from "@/components/heading/heading";
-import styles from "../styles/sections/contacts/contacts.module.scss";
 import Container from "@/components/container/container";
 import Button from "@/components/button/button";
+
+import styles from "../styles/sections/contacts/contacts.module.scss";
 
 export default async function Page() {
     return (

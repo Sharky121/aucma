@@ -1,10 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import Heading from '@/components/heading/heading';
+import Container from '@/components/container/container';
+import ButtonOffer from "@/components/button/button-offer";
+
 import styles from '../styles/sections/buy/buy.module.scss';
 import stylesLeasing from '../styles/sections/leasing/leasing.module.scss';
-import Container from '@/components/container/container';
-import Link from "next/link";
-import ButtonOffer from "@/components/button/button-offer";
 
 export default async function Page() {
     return (
