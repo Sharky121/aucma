@@ -50,7 +50,7 @@ export default async function Page() {
 
                     <ul>
                         <li>
-                            <Button text="Перезвоните мне"/>
+                            <Button text="Заказать звонок"/>
                         </li>
                         <li>
                             <Button text="Стать партнером"/>

@@ -3,8 +3,6 @@ import Container from "@/components/container/container";
 import styles from "../styles/sections/service/service.module.scss";
 import contactsStyles from "../styles/sections/service-contacts/service-contacts.module.scss";
 import mapStyles from "../styles/sections/service-map/service-map.module.scss";
-import Button from "@/components/button/button";
-import dynamic from "next/dynamic";
 import Map from "@/components/map/map";
 import ButtonOffer from "@/components/button/button-offer";
 

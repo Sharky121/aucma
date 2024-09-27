@@ -62,7 +62,7 @@ const Callback = () => {
                 <Container customClassName={styles.callbackContainer}>
                     <div className={styles.callbackHeader}>
                         <h2 className={styles.title}>Остались вопросы?</h2>
-                        <p className={styles.subtitle}>Не нашли, что искали? Оставьте свой <br /> номер - мы позвоним и поможем!</p>
+                        <p className={styles.subtitle}>Не нашли, что искали? Оставьте свой <br /> комментарий -  мы с вами свяжемся!</p>
                     </div>
 
                     <form className={styles.form} onSubmit={submitForm}>

@@ -37,4 +37,4 @@ export async function POST(request: Request, response: Response) {
     }
 
     return Response.json(userMessage);
-  }
+}
