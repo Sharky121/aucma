@@ -1,7 +1,7 @@
 import styles from './heading.module.scss';
 
 interface IHeading {
-    children: string | JSX.Element,
+    children: string | JSX.Element | undefined,
     isDanger?: boolean;
     withLink?: boolean;
     isBack?: boolean;

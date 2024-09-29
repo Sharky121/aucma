@@ -46,10 +46,9 @@
         margin-bottom: 100px;
     
         &::before {
-            top: 50%;
+            top: 10px;
 
             width: calc((100% - var.$tablet-width + 250px) / 2);
-            margin-top: -16px;
         }
     }
 

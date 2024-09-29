@@ -14,9 +14,12 @@ interface IButtonOffer {
     title?: string;
     modalTitle?: string;
     customClass?: string;
+    mail?: string;
 }
 
-const ButtonOffer = ({customClass, title, modalTitle}: IButtonOffer) => {
+type mail = "info" | "service";
+
+const ButtonOffer = ({customClass, title, modalTitle, mail = "info"}: IButtonOffer) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isSuccessOpen, setIsSuccessOpen] = useState(false);
     const [isChecked, setIsChecked] = useState(true);

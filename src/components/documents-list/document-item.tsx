@@ -25,7 +25,7 @@ const DocumentItem = ({title, files, slug}: IDocumentItem) => {
     return (
         <>
             <li className={styles.documentsItem}>
-                <div className={styles.documentsItemHeader} onClick={handleClick}>
+                <div className={`${styles.documentsItemHeader} ${isOpen ? styles.active : ''}`} onClick={handleClick}>
                     <h3 className={styles.documentsItemTitle}>{title}</h3>
                 </div>
                 {

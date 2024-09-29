@@ -54,7 +54,7 @@ export default function Home({ searchParams }: SearchParamProps) {
               <p>Надежная и продуманная конструкция в сочетании с технологиями от ведущих мировых брендов, удовлетворят самые высокие ожидания.</p>
               <p>Конструкция кузова выполнена по итальянской технологии, которая была доработана ведущими специалистами компании «AUCMA» с учетом климатических условий России.</p> 
 
-              <ButtonOffer customClass={stylesAbout.btn}/>
+              <ButtonOffer customClass={stylesAbout.btn} mail="sales"/>
             </div>
           </Container>
         </section>
