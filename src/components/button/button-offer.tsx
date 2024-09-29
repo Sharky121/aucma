@@ -33,7 +33,7 @@ const ButtonOffer = ({customClass, title, modalTitle, mail = "info"}: IButtonOff
         evt.preventDefault();
         
         try {
-            const response = await fetch('/api', {
+            const response = await fetch(`/api/${mail}`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)

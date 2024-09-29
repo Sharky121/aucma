@@ -3,6 +3,7 @@ import Container from "@/components/container/container";
 import Button from "@/components/button/button";
 
 import styles from "../styles/sections/contacts/contacts.module.scss";
+import ButtonOffer from "@/components/button/button-offer";
 
 export default async function Page() {
     return (
@@ -50,10 +51,10 @@ export default async function Page() {
 
                     <ul>
                         <li>
-                            <Button text="Заказать звонок"/>
+                            <ButtonOffer title="Заказать звонок" modalTitle="Заказать звонок"/>
                         </li>
                         <li>
-                            <Button text="Стать партнером"/>
+                            <ButtonOffer title="Стать партнером" modalTitle="Заказать звонок"/>
                         </li>
                     </ul>
                 </div>

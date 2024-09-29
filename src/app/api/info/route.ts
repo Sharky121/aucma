@@ -3,14 +3,24 @@ const nodemailer = require("nodemailer");
 export async function POST(request: Request, response: Response) {
     const formData = await request.json();
 
-    const { name, email, phone } = formData;
+    const { name = '', email = '', phone = '', comment ='' } = formData;
 
     let userMessage = '';
 
+    const getField = (text: string, value: string) => {
+        if (value !== '') {
+            return `<p>${text}: ${value}</p>`
+        }
+
+        return '';
+    }
+
     const mailMessage = `
-      <p>Имя: ${name}</p>
-      <p>Email ${email}</p>
-      <p>Телефон: ${phone}</p>`;
+        ${getField('Имя', name)} 
+        ${getField('Email', email)} 
+        ${getField('Телефон', phone)}
+        ${getField('Комментарий', comment)}
+    `;
 
     const transporter = nodemailer.createTransport({
       host: process.env.WEB_MAILER_SMTP,

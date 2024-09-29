@@ -8,6 +8,18 @@
     }
 }
 
+.textarea {
+    @extend %form-field;
+
+    height: 200px;
+
+    resize: none;
+
+    &:focus-visible {
+        outline: none;
+    }
+}
+
 .form__list {
     --col-gap: 15px;
     --row-gap: 10px;

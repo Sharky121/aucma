@@ -28,7 +28,7 @@ export default async function Page() {
                 <Heading>Получите коммерческое предложение</Heading>
                 <Container customClassName={stylesCommercial.commercialContainer}>
                     <p className={stylesCommercial.commercialText}>Оставьте адрес электронной почты, и наш менеджер <br />сразу же вышлет вам коммерческое предложение</p>
-                    <ButtonOffer title="Получить КП"/>
+                    <ButtonOffer title="Получить КП" mail="sales"/>
                 </Container>
             </section>
         </>

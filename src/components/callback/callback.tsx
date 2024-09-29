@@ -13,6 +13,7 @@ interface IFormData {
     name: string,
     email: string,
     phone: string,
+    comment: string,
     confirm: boolean;
 }
 
@@ -22,14 +23,15 @@ const Callback = () => {
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
-        email: ''
+        email: '',
+        comment: ''
     });
 
     const submitForm = async (evt: { preventDefault: () => void; }) => {
         evt.preventDefault();
         
         try {
-            const response = await fetch('/api', {
+            const response = await fetch('/api/info', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)
@@ -49,7 +51,7 @@ const Callback = () => {
         setIsChecked(!isChecked)
     }
 
-    const handleInputChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
+    const handleInputChange = (evt: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
         setFormData({
             ...formData, 
             [evt.target.name]: evt.target.value
@@ -63,6 +65,11 @@ const Callback = () => {
                     <div className={styles.callbackHeader}>
                         <h2 className={styles.title}>Остались вопросы?</h2>
                         <p className={styles.subtitle}>Не нашли, что искали? Оставьте свой <br /> комментарий -  мы с вами свяжемся!</p>
+
+                        <div className={styles.callbackComment}>
+                            <label className="visually-hidden" htmlFor='comment'>Комментарий</label>
+                            <textarea onChange={handleInputChange} className={formStyles.textarea} value={formData.comment} name='comment' placeholder='Комментарий' />
+                        </div>
                     </div>
 
                     <form className={styles.form} onSubmit={submitForm}>

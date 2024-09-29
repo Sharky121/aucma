@@ -48,10 +48,10 @@ export default async function Page() {
 
                     <ul className={contactsStyles.serviceContactButtonsList}>
                         <li className={contactsStyles.serviceContactButtonsItem}>
-                            <ButtonOffer title="Связаться с тех. специалистом" modalTitle="Связаться с тех. специалистом"/>
+                            <ButtonOffer title="Связаться с тех. специалистом" modalTitle="Связаться с тех. специалистом" mail="service"/>
                         </li>
                         <li className={contactsStyles.serviceContactButtonsItem}>
-                            <ButtonOffer title="Стать партнером" modalTitle="Стать партнером"/>
+                            <ButtonOffer title="Стать партнером" modalTitle="Стать партнером" mail="sales"/>
                         </li>
                     </ul>
                 </Container>

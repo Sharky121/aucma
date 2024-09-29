@@ -56,9 +56,6 @@ const Footer = () => {
                             <li>
                                 <Link href="contacts">Контакты</Link>
                             </li>
-                            <li>
-                                <Link href={''}>Задать вопрос</Link>
-                            </li>
                         </ul>
                         <a className={styles.phone} href="tel:+74996676543"><b>+7 (499) 677-65-43</b></a>
                     </div>

@@ -29,6 +29,11 @@
     }
 }
 
+.callbackComment {
+    margin-top: 15px;
+}
+
+
 @include var.tablet-size {
 
     .callbackContainer {
