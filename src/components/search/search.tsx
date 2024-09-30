@@ -1,12 +1,14 @@
 'use client'
 
 import { SetStateAction, useEffect, useRef, useState } from "react";
+import { useRouter } from 'next/navigation';
+
 import style from './style.module.scss';
 
 const Search = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
-    const [searchResults, setSearchResults] = useState('');
+    const router = useRouter();
 
     const modalRef = useRef(null);
     const buttonRef = useRef(null);
@@ -32,21 +34,8 @@ const Search = () => {
         setSearchTerm(evt.target.value);
     };
 
-    const handleSearch = async () => {
-        try {
-          const response = await fetch('/api/search', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ searchTerm })
-          });
-          const data = await response.json();
-            // setSearchResults(data.results);
-            setSearchResults('Извините, сайт в процессе индексации. Попробуйте немного позже');
-        } catch (error) {
-            console.error('Ошибка поиска:', error);
-        }
+    const handleSearch = () => {
+        router.push(`/search?q=${searchTerm}`);
     };
 
     useEffect(() => {
@@ -57,8 +46,7 @@ const Search = () => {
             document.removeEventListener('mousedown', handleClickOutside);
           };
         }
-      }, [isOpen]);
-
+    }, [isOpen]);
 
     return (
         <>
@@ -78,16 +66,6 @@ const Search = () => {
         
                             <button className={style.searchButton} onClick={handleSearch}>ок</button> 
                         </div>
-        
-                        {
-                            searchResults && (
-                                <div className={style.searchResults}>
-                                    <ul>
-                                        <li>{searchResults}</li>
-                                    </ul>
-                                </div>
-                            )
-                        }
                     </div>
                 )
             }

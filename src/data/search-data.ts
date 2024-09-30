@@ -1,19 +1,6 @@
 import lunr from 'lunr';
+import pages from './pages-data';
 
-const pages = [
-    {
-      path: '/about',
-      title: 'О нас',
-      content: 'Описание страницы "О нас".',
-      keywords: ['о нас', 'компания', 'история']
-    },
-    {
-      path: '/services',
-      title: 'Наши услуги',
-      content: 'Описание наших услуг.',
-      keywords: ['услуги', 'работа', 'помощь']
-    }
-];
 
 const index = lunr(function () {
     this.ref('path');

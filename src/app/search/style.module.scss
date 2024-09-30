@@ -1,0 +1,23 @@
+@use '../../app/styles/abstract' as var;
+
+.search {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+@include var.tablet-size {
+
+    .search {
+        padding-top: 80px;
+        padding-bottom: 20px;
+    }
+}
+
+@include var.desktop-size {
+
+    .search {
+        padding-top: 100px;
+        padding-bottom: 20px;
+    }
+}

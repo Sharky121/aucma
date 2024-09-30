@@ -1,0 +1,40 @@
+@use '../../app/styles/abstract' as var;
+
+.sitemap {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.sitemapItem {
+    margin-bottom: 20px;
+
+    color: var.$brand-danger;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.sitemapLink {
+    text-decoration: underline;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+@include var.tablet-size {
+
+    .sitemap {
+        padding-top: 80px;
+        padding-bottom: 20px;
+    }
+}
+
+@include var.desktop-size {
+
+    .sitemap {
+        padding-top: 100px;
+        padding-bottom: 20px;
+    }
+}
