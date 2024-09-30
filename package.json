@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
@@ -14,6 +15,7 @@
     "dotenv": "^16.4.5",
     "lunr": "^2.3.9",
     "next": "14.2.7",
+    "next-sitemap": "^4.2.3",
     "nodemailer": "^6.9.15",
     "normalize.css": "^8.0.1",
     "postmark": "^4.0.5",
