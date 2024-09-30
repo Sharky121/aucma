@@ -11,8 +11,6 @@
 .textarea {
     @extend %form-field;
 
-    height: 200px;
-
     resize: none;
 
     &:focus-visible {

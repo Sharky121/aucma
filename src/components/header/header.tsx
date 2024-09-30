@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Container from '../container/container';
 import styles from './header.module.scss';
+import Search from '../search/search';
 
 const NavMenu = [
     {
@@ -50,12 +51,7 @@ const Header = () => {
                 <div className={styles.headerUtilsMenu}>
                     <ul className={styles.headerUtilsMenu__list}>
                         <li className={styles.headerUtilsMenu__item}>
-                            <button>
-                                <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
-                                    <use xlinkHref="#ico-search" x="0" y="0"></use>
-                                </svg>
-                                <span>Поиск</span>
-                            </button>
+                            <Search />
                         </li>
                         <li className={styles.headerUtilsMenu__item}>
                             <a href="/contacts">

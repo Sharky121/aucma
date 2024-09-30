@@ -43,7 +43,7 @@ const News = [
 
 export default async function Page({params}: any) {
     const news = News.find(({id}) => id === parseInt(params.id, 10));
-    console.log(news);
+
     return (
         <>
             <section className={styles.news}>

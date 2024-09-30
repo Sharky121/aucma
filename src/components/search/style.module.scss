@@ -1,0 +1,68 @@
+@use '../../app/styles/abstract' as var;
+
+.searchWrapper {
+    @extend %box-shadow;
+
+    position: absolute;
+    top: 20px;
+    left: 0;
+
+    width: 300px;
+    max-height: 200px;
+    padding: 5px 10px;
+
+    background-color: var.$brand-white;
+    border-radius: 10px;
+
+    overflow: auto;
+    z-index: 9999;
+} 
+
+.searchField {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.searchInput {
+    @extend %form-field;
+
+    padding: 10px;
+
+    border-color: var.$brand-danger;
+
+    &:focus-visible {
+        outline: none;
+    }
+}
+
+.searchButton {
+    @extend %btn-reset;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: auto;
+    width: 40px;
+
+
+    color: white;
+    font-size: 14px;
+
+    background-color: var.$brand-danger;
+    border-radius: 5px;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.searchResults {
+    margin-top: 15px;
+    padding: 10px 0;
+}
+
+.danger {
+    color: var.$brand-danger;
+}
