@@ -4,6 +4,7 @@
     @extend %form-field;
 
     border-bottom: 2px solid var.$brand-danger;
+    border-radius: 0;
 
     &:focus-visible {
         outline: none;
@@ -26,6 +27,7 @@
     align-items: center;
     column-gap: var(--col-gap);
     row-gap: var(--row-gap);
+    width: 100%;
     margin-bottom: 30px;
 }
 
