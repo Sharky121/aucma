@@ -2,6 +2,7 @@
 
 import Portal from "../portal/portal";
 import Image from 'next/image';
+
 import styles from "./modal.module.scss";
 
 interface IModal {

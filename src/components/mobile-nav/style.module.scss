@@ -1,0 +1,86 @@
+@use '../../app/styles/abstract' as var;
+
+.mobileNavOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(var.$brand-black, 0.6);
+    animation-fill-mode: forwards;
+}
+
+.mobileNav {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 300px;
+    height: 100%;
+
+    background-color: var.$brand-white;
+    z-index: 9999;
+}
+
+.mobileNavWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    height: 100%;
+    padding: 10px;
+}
+
+.mobileNavHeader {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.mobileNavClose {
+    margin-left: auto;
+
+    color: var.$brand-danger;
+}
+
+.mobileNavBody {
+    margin-top: 70px;
+}
+
+.mobileNavList {
+    @extend %list-reset;
+}
+
+.mobileNavItem {
+    margin-bottom: 20px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.mobileNavItem:first-child {
+    color: var.$brand-danger;
+}
+
+.mobileNavLink {
+    font-size: 16px;
+    font-weight: 700;
+
+    color: inherit;
+}
+
+.mobileNavFooter {
+    margin-top: auto;
+}
+
+.mobileNavPhone {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    font-weight: 700;
+    font-size: 16px;
+}
