@@ -19,12 +19,12 @@ const SuccessModal = ({children, title, onClose}: IModal) => {
             <div className={`${styles.modal} ${styles.modalSuccess}`}>
                 <div className={styles.modalWrapper}>
                     <button className={styles.modalClose} onClick={onClose}>
-                        <svg viewBox="0 0 24 24" width="50" height="50" aria-hidden="true" focusable="false">
+                        <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false">
                             <use xlinkHref="#ico-cross" x="0" y="0"></use>
                         </svg>
                     </button>
                     <div className={styles.body}>
-                        <Image className={styles.modalLogo} src={'/logo.svg'} width={200} height={46} alt="Лого Aucma"/>
+                        <Image className={styles.modalLogo} src={'/logo.svg'} width={140} height={32} alt="Лого Aucma"/>
                         <h3 className={styles.modalTitle}>{title}</h3>
                         <div className={styles.modalSubTitle}>
                             {children}
