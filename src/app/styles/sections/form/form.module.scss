@@ -8,6 +8,10 @@
     &:focus-visible {
         outline: none;
     }
+
+    &::placeholder {
+        font-size: 12px;
+    }
 }
 
 .form__list {

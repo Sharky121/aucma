@@ -1,12 +1,13 @@
 import Image from "next/image";
-import styles from "./page.module.css";
-import stylesFeatures from "./styles/sections/features/features.module.scss";
-import stylesAbout from "./styles/sections/about/about.module.scss";
-import stylesMain from "./styles/sections/main/main.module.scss";
 import Heading from "@/components/heading/heading";
 import Container from "@/components/container/container";
 import Button from "@/components/button/button";
 import ButtonOffer from "@/components/button/button-offer";
+
+import styles from "./page.module.css";
+import stylesFeatures from "./styles/sections/features/features.module.scss";
+import stylesAbout from "./styles/sections/about/about.module.scss";
+import stylesMain from "./styles/sections/main/main.module.scss";
 
 const Features = [
   'На выбор клиента: полностью оцинкованная рама или KTL обработка рамы',
