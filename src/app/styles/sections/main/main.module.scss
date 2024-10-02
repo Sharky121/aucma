@@ -133,8 +133,11 @@
 
     .container {
         padding-top: 110px;
+        padding-bottom: 110px;
         padding-right: 15px;
-        height: 800px;
+        height: auto;
+        width: 100%;
+        aspect-ratio: 2/1;
     }
 
     .btn {

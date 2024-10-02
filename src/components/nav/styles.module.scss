@@ -1,0 +1,33 @@
+@use '../../app/styles/abstract' as var;
+
+.headerNav {
+    display: none;
+}
+
+.headerNav__list {
+    @extend %list-reset;
+}
+
+@include var.desktop-size {
+    
+    .headerNav {
+        display: block;
+        grid-area: menu;
+        justify-self: end;
+    }
+
+    .headerNav__list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .headerNav__link {
+        font-size: 14px;
+
+        &:hover {
+            color: var.$brand-danger;
+        }
+    }
+}
