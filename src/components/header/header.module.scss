@@ -82,14 +82,6 @@
     }
 }
 
-.headerNav {
-    display: none;
-}
-
-.headerNav__list {
-    @extend %list-reset;
-}
-
 @include var.tablet-size {
 
     .headerContainer {

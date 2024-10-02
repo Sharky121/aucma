@@ -8,38 +8,10 @@ import Container from '../container/container';
 import MobileNav from '../mobile-nav/mobile-nav';
 import Search from '../search/search';
 
-import styles from './header.module.scss';
+import Menu from '@/data/menu-data';
 
-const NavMenu = [
-    {
-        "title": "Специальное предложение",
-        "url": "offer"
-    },
-    {
-        "title": "Модельный ряд",
-        "url": "products"
-    },
-    {
-        "title": "Покупка",
-        "url": "buy"
-    },
-    {
-        "title": "Сервис",
-        "url": "service"
-    },
-    {
-        "title": "О компании",
-        "url": "about"
-    },
-    {
-        "title": "Документы",
-        "url": "documents"
-    },
-    {
-        "title": "Медиа",
-        "url": "media"
-    }
-];
+import styles from './header.module.scss';
+import Nav from '../nav/nav';
 
 const Header = () => {
     const pathname = usePathname();
@@ -110,17 +82,7 @@ const Header = () => {
                         <span>+7 (499) 677-65-43</span>
                     </a>
 
-                    <nav className={styles.headerNav}>
-                        <ul className={styles.headerNav__list}>
-                            {
-                                NavMenu.map(({title, url}, index) => (
-                                    <li key={index} className={styles.headerNav__item}>
-                                        <Link className={styles.headerNav__link} href={`/${url}`}>{title}</Link>
-                                    </li>
-                                ))
-                            }
-                        </ul>
-                    </nav>
+                    <Nav menu={Menu} />
                 </Container>
             </header>
             
