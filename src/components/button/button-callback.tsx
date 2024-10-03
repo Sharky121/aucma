@@ -30,9 +30,6 @@ const ButtonCallback = ({customClass}: IButtonOffer) => {
         email: ''
     });
 
-
-    console.log(process.env.WEB_MAILER_SMTP);
-
     const submitForm = async (evt: { preventDefault: () => void; }) => {
         evt.preventDefault();
         

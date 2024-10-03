@@ -14,13 +14,19 @@ interface INav {
 
 const Nav = ({ menu }: INav) => {
     const pathname = usePathname();
-    console.log(pathname);
+
+    const pathMap = pathname.split('/').filter(Boolean);
+
+    const isActiveMenu = (item: string) => {
+        return pathMap.includes(item) ? styles.isActive : '';
+    }
+
     return (
         <nav className={styles.headerNav}>
             <ul className={styles.headerNav__list}>
                 {
                     menu.map(({title, url}, index) => (
-                        <li key={index} className={styles.headerNav__item}>
+                        <li key={index} className={`${styles.headerNav__item} ${isActiveMenu(url)}`}>
                             <Link className={styles.headerNav__link} href={`/${url}`}>{title}</Link>
                         </li>
                     ))

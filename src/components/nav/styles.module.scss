@@ -23,6 +23,13 @@
         gap: 30px;
     }
 
+    .headerNav__item.isActive {
+        color: var.$brand-danger;
+    
+        cursor: default;
+        pointer-events: none;
+    }
+
     .headerNav__link {
         font-size: 14px;
 
