@@ -1,8 +1,8 @@
 @use '../../abstract' as var;
 
 .serviceMap {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .serviceMapWrapper {
@@ -15,8 +15,8 @@
 @include var.tablet-size {
 
     .serviceMap {
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 
     .serviceMapWrapper {
