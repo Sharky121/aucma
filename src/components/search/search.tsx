@@ -50,7 +50,7 @@ const Search = () => {
 
     return (
         <>
-            <button onClick={handleSearchOpen} ref={buttonRef}>
+            <button className={style.searchButton} onClick={handleSearchOpen} ref={buttonRef}>
                 <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
                     <use xlinkHref="#ico-search" x="0" y="0"></use>
                 </svg>
@@ -64,7 +64,7 @@ const Search = () => {
                             <label className="visually-hidden" htmlFor='search'>Поиск</label>
                             <input className={style.searchInput} placeholder='Поиск' id='search' name='search' minLength={2} maxLength={60} type="text" value={searchTerm} onChange={handleSearchChange} />
         
-                            <button className={style.searchButton} onClick={handleSearch}>ок</button> 
+                            <button className={style.searchConfirm} onClick={handleSearch}>ок</button> 
                         </div>
                     </div>
                 )

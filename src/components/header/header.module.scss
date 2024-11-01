@@ -51,10 +51,11 @@
 .headerUtilsMenu__item {
     position: relative;
 
+    display: inline-flex;
     padding-right: 10px;
     margin-right: 10px;
 
-    font-size: 12px;
+    font-size: 14px;
 
     &::after {
         content: '';
@@ -65,9 +66,15 @@
 
         display: block;
         width: 2px;
-        height: 15px;
+        height: 16px;
 
         background-color: var.$brand-grey;
+    }
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
     }
 
     svg {

@@ -39,6 +39,14 @@
 .searchButton {
     @extend %btn-reset;
 
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.searchConfirm {
+    @extend %btn-reset;
+
     display: flex;
     justify-content: center;
     align-items: center;
