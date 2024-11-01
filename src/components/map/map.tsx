@@ -20,7 +20,8 @@ const Map = () => {
                     <YMap location={location}>
                         <YMapDefaultSchemeLayer />
                         <YMapDefaultFeaturesLayer />
-                        <YMapDefaultMarker coordinates={[37.583760, 55.381915]}/>
+                        <YMapDefaultMarker coordinates={[55.376757, 37.591939]}/>
+                        <YMapDefaultMarker coordinates={[55.376559, 37.588183]}/>
                     </YMap>
                 </YMapComponentsProvider>
             </div>        
