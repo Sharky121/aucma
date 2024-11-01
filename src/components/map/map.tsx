@@ -5,7 +5,8 @@ import {
   YMapDefaultSchemeLayer,
   YMapDefaultFeaturesLayer,
   YMapComponentsProvider,
-  YMapDefaultMarker
+  YMapDefaultMarker,
+  YMapMarker
 } from "ymap3-components";
 import styles from "./map.module.scss";
 
@@ -20,8 +21,8 @@ const Map = () => {
                     <YMap location={location}>
                         <YMapDefaultSchemeLayer />
                         <YMapDefaultFeaturesLayer />
-                        <YMapDefaultMarker coordinates={[55.376757, 37.591939]}/>
-                        <YMapDefaultMarker coordinates={[55.376559, 37.588183]}/>
+                        <YMapMarker coordinates={[55.376559, 37.588183]}/>
+                        <YMapMarker coordinates={[55.376757, 37.591939]}/>
                     </YMap>
                 </YMapComponentsProvider>
             </div>        
