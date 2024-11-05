@@ -1,4 +1,4 @@
-@use "../../styles/abstract";
+@use "../../styles/abstract" as var;
 
 .news {
     padding-top: 40px;
@@ -8,4 +8,39 @@
 .desc {
     font-size: 16px;
     line-height: 1.4;
+}
+
+.newsDesc {
+
+    p {
+        margin: 15px 0;
+
+        font-size: 16px;
+    }
+
+    dl {
+        margin-bottom: 40px;
+
+        font-size: 16px;
+    }
+    
+    dl div {
+        margin-bottom: 10px;
+    
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    
+    dt {
+        margin-bottom: 5px;
+
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    a {
+        text-decoration: underline;
+        color: var.$brand-danger;
+    }
 }

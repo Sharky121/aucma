@@ -12,6 +12,7 @@
   "dependencies": {
     "@types/lunr": "^2.3.7",
     "@types/nodemailer": "^6.4.16",
+    "dompurify": "^3.1.7",
     "dotenv": "^16.4.5",
     "lunr": "^2.3.9",
     "next": "14.2.7",
@@ -28,6 +29,7 @@
     "ymaps": "^0.2.1"
   },
   "devDependencies": {
+    "@types/dompurify": "^3.0.5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
