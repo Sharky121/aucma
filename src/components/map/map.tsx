@@ -101,7 +101,7 @@ const Map = () => {
                 content: string;
             };
         };
-        // Use dangerouslySetInnerHTML because the hint message has <b> and <br> tags
+
         return (
             hintContext && (
                 <div className={styles.hintWindow}>
@@ -125,8 +125,10 @@ const Map = () => {
                             <HintWindow />
                         </YMapHint>
 
+                        
                         {
                             Points.map((point, index) => (
+                                // @ts-ignore
                                 <YMapDefaultMarker key={index} {...point} />
                             ))
                         }
