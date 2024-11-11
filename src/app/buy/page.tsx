@@ -3,9 +3,11 @@ import Link from "next/link";
 import Heading from '@/components/heading/heading';
 import Container from '@/components/container/container';
 import ButtonOffer from "@/components/button/button-offer";
+import Map from "@/components/map/map";
 
 import styles from '../styles/sections/buy/buy.module.scss';
 import stylesLeasing from '../styles/sections/leasing/leasing.module.scss';
+import stylesDealer from '../styles/sections/dealers-map/dealers-map.module.scss';
 
 export default async function Page() {
     return (
@@ -21,8 +23,15 @@ export default async function Page() {
                 </Container>
             </section>
 
+            <section className={stylesDealer.dealersMap}>
+                <Heading>Дилеры</Heading>
+                <Container>
+                    <Map />
+                </Container>
+            </section>
+
             <section className={stylesLeasing.leasing}>
-                <Heading>Лизинг</Heading>
+                <Heading isDanger>Лизинг</Heading>
 
                 <Container>
                     <p className={stylesLeasing.leasingText}>Мы сотрудничаем с большинством лизинговых компаний представленных <br /> на рынке РФ, что позволяет нашим клиентам находить самые выгодные <br /> предложения максимально быстро.</p>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Head from "next/head";
+import Script from 'next/script';
 import { Montserrat } from "next/font/google";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
@@ -33,7 +33,9 @@ export default function RootLayout({
         
         <Callback />
         <Footer />
-
+        {/* <Script src="https://api-maps.yandex.ru/v3/?apikey=cac5b520-ec6d-4f80-b8a5-eb55d0da1f0a&lang=ru_RU" 
+                strategy="beforeInteractive"
+            /> */}
         {/* SVG-ICONS */}
         <div style={{ display: "none" }}>
           <svg preserveAspectRatio="xMinYMid">

@@ -1,0 +1,22 @@
+@use '../../abstract' as var;
+
+.dealersMap {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@include var.tablet-size {
+
+    .dealersMap  {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+@include var.desktop-size {
+
+    .dealersMap  {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}

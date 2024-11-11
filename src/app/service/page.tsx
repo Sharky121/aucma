@@ -6,7 +6,6 @@ import mapStyles from "../styles/sections/service-map/service-map.module.scss";
 import Map from "@/components/map/map";
 import ButtonOffer from "@/components/button/button-offer";
 
-
 export default async function Page() {
     return (
         <>
