@@ -3,10 +3,9 @@ import { Montserrat } from "next/font/google";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import Callback from "@/components/callback/callback";
+import YandexMetrika from "@/components/yametrics/yametrics";
 
 import "./styles/globals.scss";
-import YandexMetrika from "@/components/yametrics/yametrics";
-import { Head } from "next/document";
 
 const montserrat = Montserrat({ 
   subsets: ["latin"],
