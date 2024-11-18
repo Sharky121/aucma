@@ -25,9 +25,6 @@
 
     .headerNav__item.isActive {
         color: var.$brand-danger;
-    
-        cursor: default;
-        pointer-events: none;
     }
 
     .headerNav__link {

@@ -17,6 +17,8 @@ const Nav = ({ menu }: INav) => {
 
     const pathMap = pathname.split('/').filter(Boolean);
 
+    console.log(pathMap);
+
     const isActiveMenu = (item: string) => {
         return pathMap.includes(item) ? styles.isActive : '';
     }

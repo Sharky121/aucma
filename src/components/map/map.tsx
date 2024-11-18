@@ -124,7 +124,6 @@ const Map = () => {
                         <YMapHint hint={getHint}>
                             <HintWindow />
                         </YMapHint>
-
                         
                         {
                             Points.map((point, index) => (

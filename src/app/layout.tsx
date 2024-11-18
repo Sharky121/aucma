@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import Script from 'next/script';
 import { Montserrat } from "next/font/google";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import Callback from "@/components/callback/callback";
 
 import "./styles/globals.scss";
-
+import YandexMetrika from "@/components/yametrics/yametrics";
+import { Head } from "next/document";
 
 const montserrat = Montserrat({ 
   subsets: ["latin"],
@@ -33,9 +33,8 @@ export default function RootLayout({
         
         <Callback />
         <Footer />
-        {/* <Script src="https://api-maps.yandex.ru/v3/?apikey=cac5b520-ec6d-4f80-b8a5-eb55d0da1f0a&lang=ru_RU" 
-                strategy="beforeInteractive"
-            /> */}
+        
+        <YandexMetrika/>
         {/* SVG-ICONS */}
         <div style={{ display: "none" }}>
           <svg preserveAspectRatio="xMinYMid">
