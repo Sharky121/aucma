@@ -6,6 +6,7 @@ import Callback from "@/components/callback/callback";
 
 import "./styles/globals.scss";
 import Script from "next/script";
+import YandexMetrikaTag from "@/components/yametrics-tag/yametrics-tag";
 
 const montserrat = Montserrat({ 
   subsets: ["latin"],
@@ -51,6 +52,8 @@ export default function RootLayout({
             });
           `}
         </Script>
+
+        <YandexMetrikaTag/>
 
         {/* SVG-ICONS */}
         <div style={{ display: "none" }}>
