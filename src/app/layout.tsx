@@ -3,9 +3,9 @@ import { Montserrat } from "next/font/google";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import Callback from "@/components/callback/callback";
-import YandexMetrika from "@/components/yametrics/yametrics";
 
 import "./styles/globals.scss";
+import Script from "next/script";
 
 const montserrat = Montserrat({ 
   subsets: ["latin"],
@@ -32,8 +32,26 @@ export default function RootLayout({
         
         <Callback />
         <Footer />
-        
-        <YandexMetrika/>
+
+        <Script strategy="beforeInteractive">
+          {`
+            console.log('yandex metrica load');
+
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+         
+            ym(98962211, "init", {
+                 clickmap:true,
+                 trackLinks:true,
+                 accurateTrackBounce:true,
+                 webvisor:true
+            });
+          `}
+        </Script>
+
         {/* SVG-ICONS */}
         <div style={{ display: "none" }}>
           <svg preserveAspectRatio="xMinYMid">
