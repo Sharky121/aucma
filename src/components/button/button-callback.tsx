@@ -1,5 +1,7 @@
 'use client';
 
+import ym from "react-yandex-metrika";
+
 import {useState } from "react";
 import Button from "./button";
 import Modal from "../modal/modal";
@@ -41,6 +43,7 @@ const ButtonCallback = ({customClass}: IButtonOffer) => {
             });
 
             if (response.ok) {
+                ym('98962211','reachGoal','form');
                 setIsOpen(false);
                 setIsSuccessOpen(true);
             } else {

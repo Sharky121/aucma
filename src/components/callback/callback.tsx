@@ -8,6 +8,7 @@ import checkboxStyles from './checkbox.module.scss';
 import formStyles from './form.module.scss';
 import { useState } from 'react';
 import SuccessModal from '../modal/success-modal';
+import ym from 'react-yandex-metrika';
 
 interface IFormData {
     name: string,
@@ -38,6 +39,7 @@ const Callback = () => {
             });
 
             if (response.ok) {
+                ym('89439426', 'reachGoal', 'form');
                 setIsSuccessOpen(true);
             } else {
                 console.log('Ошибка в try');
@@ -99,7 +101,10 @@ const Callback = () => {
                                     <span>Я согласен с условиями обработки <Link href={'/politics'}>персональных данных</Link></span>
                                 </label>
                             </div>
-                            <Button isButton={true} text={'Отправить'} type="submit"/>
+                            <Button 
+                                isButton={true} 
+                                text={'Отправить'} 
+                                type="submit" />
                         </div>
                     </form>
                 </Container>
