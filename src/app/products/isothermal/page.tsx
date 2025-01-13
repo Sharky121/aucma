@@ -120,7 +120,7 @@ export default async function Page() {
 
                     <div className={style.productDescriptionBlock}>
                         <div className={style.productDescriptionImg}>
-                            <Image src={'/product_1.jpg'} fill alt="Оси, подвеска и шины"/>
+                            <Image src={'/product_1.jpg'} fill alt="Оси, подвеска и шины" unoptimized/>
                         </div>
                         <div className={style.productDescriptionContent}>
                             <h3>Оси, подвеска и шины:</h3>
@@ -144,7 +144,7 @@ export default async function Page() {
                             </ul>
                         </div>
                         <div className={style.productDescriptionImg}>
-                            <Image src={'/product_2.jpg'} fill alt="Опорное устройство"/>
+                            <Image src={'/product_2.jpg'} fill alt="Опорное устройство" unoptimized/>
                         </div>
                     </div>
 
@@ -155,7 +155,7 @@ export default async function Page() {
                     
                     <div className={style.productDescriptionBlock}>
                         <div className={style.productDescriptionImg}>
-                            <Image src={'/product_3.jpg'} fill alt="Электрическое оборудованиеs"/>
+                            <Image src={'/product_3.jpg'} fill alt="Электрическое оборудованиеs" unoptimized/>
                         </div>
                         <div className={style.productDescriptionContent}>
                             <h3>Электрическое оборудование:</h3>
@@ -173,7 +173,7 @@ export default async function Page() {
                             <p>Анодированный плинтус 300 мм по периметру кузова</p>
                         </div>
                         <div className={style.productDescriptionImg}>
-                            <Image src={'/product_5.jpg'} fill alt="Кузов"/>
+                            <Image src={'/product_5.jpg'} fill alt="Кузов" unoptimized/>
                         </div>
                     </div>
                 </Container>

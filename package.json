@@ -18,7 +18,7 @@
     "lunr": "^2.3.9",
     "next": "14.2.7",
     "next-sitemap": "^4.2.3",
-    "nodemailer": "^6.9.15",
+    "nodemailer": "^6.9.16",
     "normalize.css": "^8.0.1",
     "postmark": "^4.0.5",
     "react": "^18",

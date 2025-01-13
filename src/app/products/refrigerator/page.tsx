@@ -124,7 +124,7 @@ export default async function Page() {
 
                     <div className={style.productDescriptionBlock}>
                         <div className={style.productDescriptionImg}>
-                            <Image src={'/product_1.jpg'} fill alt="Оси, подвеска и шины"/>
+                            <Image src={'/product_1.jpg'} fill alt="Оси, подвеска и шины" unoptimized/>
                         </div>
                         <div className={style.productDescriptionContent}>
                             <h3>Оси, подвеска и шины:</h3>
@@ -159,7 +159,7 @@ export default async function Page() {
                     
                     <div className={style.productDescriptionBlock}>
                         <div className={style.productDescriptionImg}>
-                            <Image src={'/product_3.jpg'} fill alt="Электрическое оборудованиеs"/>
+                            <Image src={'/product_3.jpg'} fill alt="Электрическое оборудованиеs" unoptimized/>
                         </div>
                         <div className={style.productDescriptionContent}>
                             <h3>Электрическое оборудование:</h3>
@@ -181,13 +181,13 @@ export default async function Page() {
                             <p>Полуприцеп «Aucma» оснащён современной системой удаленного мониторинга «iQFreeze»/«ThermoFleet» с датчиками температуры, открытия дверей, нагрузки на ось и навигацией. Данная система позволяет отслеживать информацию о прицепе в режиме реального времени.</p>
                         </div>
                         <div className={style.productDescriptionImg}>
-                            <Image src={'/product_4.jpg'} fill alt="Холодильная установка"/>
+                            <Image src={'/product_4.jpg'} fill alt="Холодильная установка" unoptimized/>
                         </div>
                     </div>
 
                     <div className={style.productDescriptionBlock}>
                         <div className={style.productDescriptionImg}>
-                            <Image src={'/product_5.jpg'} fill alt="Кузов"/>
+                            <Image src={'/product_5.jpg'} fill alt="Кузов" unoptimized/>
                         </div>
                         <div className={style.productDescriptionContent}>
                             <h3>Кузов:</h3>

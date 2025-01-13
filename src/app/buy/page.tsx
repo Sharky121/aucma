@@ -38,37 +38,37 @@ export default async function Page() {
                     <ul className={stylesLeasing.leasingList}>
                         <li className={stylesLeasing.leasingItem}>
                             <Link href="https://www.carcade.com" target="_blank" rel="nofollow">
-                                <Image src="/leasing/liz1.png" width={190} height={83} alt="Лизинг автомобилей от компании CARCADE"></Image>
+                                <Image src="/leasing/liz1.png" width={190} height={83} alt="Лизинг автомобилей от компании CARCADE" unoptimized></Image>
                             </Link>
                         </li>
                         <li className={stylesLeasing.leasingItem}>
                             <Link href="https://www.resoleasing.com/" target="_blank" rel="nofollow">
-                                <Image src="/leasing/liz2.png" width={190} height={83} alt="РЕСО лизинг"></Image>
+                                <Image src="/leasing/liz2.png" width={190} height={83} alt="РЕСО лизинг" unoptimized></Image>
                             </Link>
                         </li>
                         <li className={stylesLeasing.leasingItem}>
                             <Link href="https://www.vtb-leasing.ru/" target="_blank" rel="nofollow">
-                                <Image src="/leasing/liz3.png" width={190} height={83} alt="ВТБ лизинг"></Image>
+                                <Image src="/leasing/liz3.png" width={190} height={83} alt="ВТБ лизинг" unoptimized></Image>
                             </Link>
                         </li>
                         <li className={stylesLeasing.leasingItem}>
                             <Link href="https://sovcombank-leasing.ru/" target="_blank" rel="nofollow">
-                                <Image src="/leasing/liz4.png" width={190} height={83} alt="СОВКОМ банк лизинг"></Image>
+                                <Image src="/leasing/liz4.png" width={190} height={83} alt="СОВКОМ банк лизинг" unoptimized></Image>
                             </Link>
                         </li>
                         <li className={stylesLeasing.leasingItem}>
                             <Link href="https://alfaleasing.ru" target="_blank" rel="nofollow">
-                                <Image src="/leasing/liz5.png" width={190} height={83} alt="Альфа-банк лизинг"></Image>
+                                <Image src="/leasing/liz5.png" width={190} height={83} alt="Альфа-банк лизинг" unoptimized></Image>
                             </Link>
                         </li>
                         <li className={stylesLeasing.leasingItem}>
                             <Link href="https://gpbl.ru" target="_blank" rel="nofollow">
-                                <Image src="/leasing/liz6.png" width={190} height={96} alt="Газпром лизинг"></Image>
+                                <Image src="/leasing/liz6.png" width={190} height={96} alt="Газпром лизинг" unoptimized></Image>
                             </Link>
                         </li>
                         <li className={stylesLeasing.leasingItem}>
                             <Link href="https://europlan.ru/" target="_blank" rel="nofollow">
-                                <Image src="/leasing/liz7.png" width={190} height={96} alt="Европром лизинг"></Image>
+                                <Image src="/leasing/liz7.png" width={190} height={96} alt="Европром лизинг" unoptimized></Image>
                             </Link>
                         </li>
                     </ul>

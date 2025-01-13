@@ -112,7 +112,7 @@ export default async function Page() {
                             <li key={index} className={styles.productsItem}>
                                 <div className={styles.productsImg}>
                                     <Link href={`/products/${slug}`}>
-                                        <Image src={`/product_${index + 1}.png`} fill alt={title} />
+                                        <Image src={`/product_${index + 1}.png`} fill alt={title} unoptimized/>
                                     </Link>
                                 </div>
                                 <h3 className={styles.productsTitle}>{title}</h3>

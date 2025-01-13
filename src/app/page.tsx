@@ -49,7 +49,7 @@ export default function Home({ searchParams }: SearchParamProps) {
         <section className={stylesAbout.about}>
           <Heading isDanger>Полуприцепы AUCMA</Heading>
           <Container customClassName={stylesAbout.container}>
-            <Image src="/about.png" width="292" height="240" alt="Полуприцеп AUCMA"></Image>
+            <Image src="/about.png" width="292" height="240" alt="Полуприцеп AUCMA" unoptimized/>
             <div className={stylesAbout.wrapper}>
               <p><b>Полуприцеп «AUCMA» представляет собой уникальное для рынка грузовых перевозок решение. </b></p>
               <p>Надежная и продуманная конструкция в сочетании с технологиями от ведущих мировых брендов, удовлетворят самые высокие ожидания.</p>

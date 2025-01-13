@@ -2,7 +2,6 @@ import Heading from "@/components/heading/heading";
 import styles from "../styles/sections/offer/offer.module.scss";
 import stylesCommercial from "../styles/sections/commercial/commercial.module.scss";
 import Container from "@/components/container/container";
-import Button from "@/components/button/button";
 import ButtonOffer from "@/components/button/button-offer";
 
 export default async function Page() {
