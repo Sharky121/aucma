@@ -1,0 +1,63 @@
+@use "../../app/styles/abstract" as var;
+
+.banner {
+    position: absolute;
+    left: 0;
+    top: 30px;
+
+    padding: 15px;
+
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: var.$brand-white;
+
+    background-color: var.$brand-danger;
+
+    border: 2px solid var.$brand-danger;
+    box-shadow: inset 0 0 0 2px var.$brand-danger, 
+                inset 0 0 0 4px var.$brand-white;
+
+    &:hover {
+        border: 2px solid var.$brand-white;
+    }
+}
+
+.bannerText {
+    margin-bottom: 10px;
+}
+
+.bannerUnderline {
+    text-decoration: underline;
+}
+
+.bannerCost {
+    margin: 15px 0;
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.bannerNote {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+@include var.tablet-size {
+
+    .banner {
+        top: 60px;
+
+        max-width: 460px;
+    }
+}
+
+@include var.desktop-size {
+
+    .banner {
+        top: 110px;
+
+        max-width: 100%;
+        padding: 30px 35px;
+    }
+}
