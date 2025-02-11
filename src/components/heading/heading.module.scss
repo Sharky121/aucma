@@ -40,6 +40,10 @@
     color: var.$brand-black;
 }
 
+.note {
+    font-weight: 600;
+}
+
 @include var.tablet-size {
 
     .wrapper {
@@ -74,5 +78,19 @@
 
     .container {
         max-width: var.$desktop-width;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+
+    .title {
+        margin-right: 10px;
+    }
+
+    .note {
+        display: inline-block;
+        margin-bottom: 7px;
+
+        font-size: 18px;
     }
 }

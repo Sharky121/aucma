@@ -214,7 +214,7 @@ export default async function Page() {
                             <p>Телефон для заказа: <br /> <b>+7 (499) 677 65 43</b>. Звоните, или закажите обратный звонок</p>
                             <ButtonCallback customClass={style.productOrderButton}></ButtonCallback>
                         </li>
-                        <li>s
+                        <li>
                             <p>Воспользуйтесь нашими финансовыми инструментами получите беспроцентный кредит:</p>
                             <Button customClass={style.productOrderButton} text="Лизинг" url="/buy"/>
                         </li>
