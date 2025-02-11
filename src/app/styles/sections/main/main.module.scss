@@ -49,10 +49,6 @@
     margin-top: 25px;
 }
 
-.offerLink {
-    display: none;
-}
-
 @include var.tablet-size {
 
     .section {
@@ -77,36 +73,6 @@
 
     .btn {
         display: none !important;
-    }
-
-    .offerLink {
-        display: inline-flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        width: 225px;
-        height: 225px;
-        margin-top: 80px;
-
-        text-align: center;
-        color: var.$brand-white;
-
-        border-radius: 50%;
-        background-color: var.$brand-danger;
-
-        h4 {
-            font-size: 16px;
-        }
-
-        span {
-            font-size: 12px;
-        }
-
-        svg {
-            transform: rotate(-91deg);
-        }
     }
 
     .title {
@@ -152,17 +118,6 @@
         svg {
             width: 60px;
             height: 60px;
-        }
-    }
-
-    .offerLink {
-        width: 260px;
-        height: 260px;
-        margin-top: 120px;
-        gap: 15px;
-
-        h4 {
-            font-size: 18px;
         }
     }
 }

@@ -8,7 +8,7 @@ const Banner = () => {
             <p className={styles.bannerText}>Распродажа рефрижераторных полуприцепов 2024 года выпуска!</p>
             <p className={styles.bannerText}>Не упустите шанс обновить автопарк по  <br /> <span className={styles.bannerUnderline}>специальной цене</span> </p>
             <p className={styles.bannerCost}><strong>8 500 000 &#8381;</strong></p>
-            <small className={styles.bannerNote}>* Количество ограничено! Цена действительна до конца января 2025 года</small>
+            <small className={styles.bannerNote}>* Количество ограничено! Цена действительна до конца февраля 2025 года</small>
         </Link>
     )
 }

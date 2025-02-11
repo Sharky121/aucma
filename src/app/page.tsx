@@ -9,6 +9,7 @@ import stylesFeatures from "./styles/sections/features/features.module.scss";
 import stylesAbout from "./styles/sections/about/about.module.scss";
 import stylesMain from "./styles/sections/main/main.module.scss";
 import Banner from "@/components/banner/banner";
+import OfferLink from "@/components/offer-link/offer-link";
 
 const Features = [
   'На выбор клиента: полностью оцинкованная рама или KTL обработка рамы',
@@ -37,13 +38,7 @@ export default function Home({ searchParams }: SearchParamProps) {
             <h1 className={stylesMain.title}>Полуприцепы <br/> AUCMA</h1>
             <p className={stylesMain.subtitle}>Легкость в движении <br/> надежность в пути</p>
             <Button text={'Специальное предложение на сцепку'} customClass={stylesMain.btn} url={'/offer'}/>
-            <a className={stylesMain.offerLink} href="/offer">
-              <h4>Специальное <br /> предложение <br /> на сцепку</h4>
-              <span>FAW J7 4х2 2024г. + <br /> Полуприцеп AUCMA</span>
-              <svg viewBox="0 0 22 22" width="50" height="50" aria-hidden="true" focusable="false">
-                  <use xlinkHref="#ico-arrow-right-top" x="0" y="0"></use>
-              </svg>
-            </a>
+            <OfferLink />
           </Container>
         </section>
 
