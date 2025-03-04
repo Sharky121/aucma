@@ -34,7 +34,6 @@ export default function Home({ searchParams }: SearchParamProps) {
         {/* Главная секция */}
         <section className={stylesMain.section}>
           <Container customClassName={stylesMain.container}>
-            <Banner/>
             <h1 className={stylesMain.title}>Полуприцепы <br/> AUCMA</h1>
             <p className={stylesMain.subtitle}>Легкость в движении <br/> надежность в пути</p>
             <Button text={'Специальное предложение на сцепку'} customClass={stylesMain.btn} url={'/offer'}/>

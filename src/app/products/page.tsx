@@ -16,6 +16,10 @@ export default async function Page() {
                     {
                         Products.map(({title, descriptions, slug}, index) => (
                             <li key={index} className={styles.productsItem}>
+                                <div className={styles.productsItemDiscount}>
+                                    Скидка <strong>500 000 &#8381;*</strong> на модельный ряд полуприцепов 2024 года!
+                                </div>
+
                                 <div className={styles.productsImg}>
                                     <Link href={`/products/${slug}`}>
                                         <Image src={`/product_${index + 1}.png`} fill alt={title} unoptimized/>
@@ -37,6 +41,8 @@ export default async function Page() {
                                 </table>
 
                                 <Button customClass={styles.productsBtn} text="Подробнее" url={`/products/${slug}`}/>
+
+                                <p className={styles.productsItemNote}>*подробности уточняйте по телефону, электронной почте или заказывайте звонок, мы обязательно с Вами свяжемся!</p>
                             </li>
                         ))
                     }

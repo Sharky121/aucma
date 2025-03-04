@@ -3,6 +3,7 @@ import styles from "../styles/sections/offer/offer.module.scss";
 import stylesCommercial from "../styles/sections/commercial/commercial.module.scss";
 import Container from "@/components/container/container";
 import ButtonOffer from "@/components/button/button-offer";
+import OfferLink from "@/components/offer-link/offer-link";
 
 export default async function Page() {
     return (
@@ -10,6 +11,7 @@ export default async function Page() {
             <section className={styles.offer}>
                 <Heading isDanger>Специальное предложение</Heading>
                 <Container customClassName={styles.offerContainer}>
+                    <OfferLink />
                     <p className={styles.offerText}>ООО «АКМА РУС» является партнером китайской компании «FAW TRUCKS». В целях укрепления и развития дружественных отношений, <br /> наши компании  разработали уникальное предложение для российского рынка по приобретению транспортных средств.</p>
                     
                     <strong className={styles.offerSlogan}>Мы предлагаем</strong>
